@@ -35,7 +35,7 @@
             // 
             this.labelHome.AutoSize = true;
             this.labelHome.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHome.Location = new System.Drawing.Point(88, 81);
+            this.labelHome.Location = new System.Drawing.Point(88, 59);
             this.labelHome.Name = "labelHome";
             this.labelHome.Size = new System.Drawing.Size(79, 34);
             this.labelHome.TabIndex = 0;
