@@ -32,6 +32,7 @@
             this.btnVerses = new System.Windows.Forms.Button();
             this.btnChapters = new System.Windows.Forms.Button();
             this.btnBooks = new System.Windows.Forms.Button();
+            this.panelBibleContainer = new System.Windows.Forms.Panel();
             this.panelBibleMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,11 +110,20 @@
             this.btnBooks.UseVisualStyleBackColor = true;
             this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
             // 
+            // panelBibleContainer
+            // 
+            this.panelBibleContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBibleContainer.Location = new System.Drawing.Point(0, 100);
+            this.panelBibleContainer.Name = "panelBibleContainer";
+            this.panelBibleContainer.Size = new System.Drawing.Size(1080, 515);
+            this.panelBibleContainer.TabIndex = 3;
+            // 
             // UCBible
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.Controls.Add(this.panelBibleContainer);
             this.Controls.Add(this.panelBibleMenu);
             this.Name = "UCBible";
             this.Size = new System.Drawing.Size(1080, 615);
@@ -127,5 +137,6 @@
         private System.Windows.Forms.Button btnBooks;
         private System.Windows.Forms.Button btnChapters;
         private System.Windows.Forms.Button btnVerses;
+        private System.Windows.Forms.Panel panelBibleContainer;
     }
 }

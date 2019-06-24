@@ -15,9 +15,11 @@ namespace Bible
         private bool btnBooksIcon = true;
         private bool btnChaptersIcon = true;
         private bool btnVersesIcon = true;
+        private UCBibleBooks UcBooks;
 
         public UCBible()
         {
+            UcBooks = new UCBibleBooks();
             InitializeComponent();
         }
 
@@ -31,12 +33,16 @@ namespace Bible
                 btnChaptersIcon = true;
                 btnVerses.Image = Properties.Resources.triangleUp;
                 btnVersesIcon = true;
+                VerifyControls(UcBooks);
             }
             else
             {
                 btnBooks.Image = Properties.Resources.triangleUp;
                 btnBooksIcon = true;
-            }       
+                UcBooks.Hide();
+            }
+
+            
         }
 
         private void btnChapters_Click(object sender, EventArgs e)
@@ -72,6 +78,20 @@ namespace Bible
             {
                 btnVerses.Image = Properties.Resources.triangleUp;
                 btnVersesIcon = true;
+            }
+        }
+
+        private void VerifyControls(UCBibleBooks UcBooks)
+        {
+            if (!panelBibleContainer.Controls.Contains(UcBooks))
+            {
+                UcBooks.Dock = DockStyle.Fill;
+                panelBibleContainer.Controls.Add(UcBooks);
+                UcBooks.Show();
+            }
+            else
+            {
+                UcBooks.Show();
             }
         }
     }
