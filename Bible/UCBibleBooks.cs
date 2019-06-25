@@ -16,5 +16,10 @@ namespace Bible
         {
             InitializeComponent();
         }
+
+        private void booksButton_Click(object sender, EventArgs e )
+        {
+            string tag = ((Button)sender).Tag.ToString();
+        }
     }
 }

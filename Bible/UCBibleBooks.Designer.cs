@@ -48,7 +48,6 @@
             this.btnEster = new System.Windows.Forms.Button();
             this.btnJo = new System.Windows.Forms.Button();
             this.btnSalmos = new System.Windows.Forms.Button();
-            this.panelBooksContainer = new System.Windows.Forms.Panel();
             this.btnProverbios = new System.Windows.Forms.Button();
             this.btnEclesiastes = new System.Windows.Forms.Button();
             this.btnCanticos = new System.Windows.Forms.Button();
@@ -96,6 +95,7 @@
             this.btnJoao3 = new System.Windows.Forms.Button();
             this.btnJudas = new System.Windows.Forms.Button();
             this.btnApocalipse = new System.Windows.Forms.Button();
+            this.panelBooksContainer = new System.Windows.Forms.Panel();
             this.flowBooksPanel.SuspendLayout();
             this.panelBooksContainer.SuspendLayout();
             this.SuspendLayout();
@@ -174,6 +174,7 @@
             this.flowBooksPanel.Name = "flowBooksPanel";
             this.flowBooksPanel.Size = new System.Drawing.Size(350, 463);
             this.flowBooksPanel.TabIndex = 0;
+            this.flowBooksPanel.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnGenesis
             // 
@@ -186,8 +187,10 @@
             this.btnGenesis.Name = "btnGenesis";
             this.btnGenesis.Size = new System.Drawing.Size(297, 60);
             this.btnGenesis.TabIndex = 0;
+            this.btnGenesis.Tag = "Genesis";
             this.btnGenesis.Text = "Gênesis";
             this.btnGenesis.UseVisualStyleBackColor = false;
+            this.btnGenesis.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnExodo
             // 
@@ -200,8 +203,10 @@
             this.btnExodo.Name = "btnExodo";
             this.btnExodo.Size = new System.Drawing.Size(297, 60);
             this.btnExodo.TabIndex = 1;
+            this.btnExodo.Tag = "Exodo";
             this.btnExodo.Text = "Êxodo";
             this.btnExodo.UseVisualStyleBackColor = false;
+            this.btnExodo.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnLevitico
             // 
@@ -214,8 +219,10 @@
             this.btnLevitico.Name = "btnLevitico";
             this.btnLevitico.Size = new System.Drawing.Size(297, 60);
             this.btnLevitico.TabIndex = 2;
+            this.btnLevitico.Tag = "Levitico";
             this.btnLevitico.Text = "Levítico";
             this.btnLevitico.UseVisualStyleBackColor = false;
+            this.btnLevitico.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnNumeros
             // 
@@ -228,8 +235,10 @@
             this.btnNumeros.Name = "btnNumeros";
             this.btnNumeros.Size = new System.Drawing.Size(297, 60);
             this.btnNumeros.TabIndex = 3;
+            this.btnNumeros.Tag = "Numeros";
             this.btnNumeros.Text = "Números";
             this.btnNumeros.UseVisualStyleBackColor = false;
+            this.btnNumeros.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnDeuteronomio
             // 
@@ -242,8 +251,10 @@
             this.btnDeuteronomio.Name = "btnDeuteronomio";
             this.btnDeuteronomio.Size = new System.Drawing.Size(297, 60);
             this.btnDeuteronomio.TabIndex = 4;
+            this.btnDeuteronomio.Tag = "Deuteronomio";
             this.btnDeuteronomio.Text = "Deuteronômio";
             this.btnDeuteronomio.UseVisualStyleBackColor = false;
+            this.btnDeuteronomio.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnJosue
             // 
@@ -256,8 +267,10 @@
             this.btnJosue.Name = "btnJosue";
             this.btnJosue.Size = new System.Drawing.Size(297, 60);
             this.btnJosue.TabIndex = 5;
+            this.btnJosue.Tag = "Josue";
             this.btnJosue.Text = "Josué";
             this.btnJosue.UseVisualStyleBackColor = false;
+            this.btnJosue.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnJuizes
             // 
@@ -270,8 +283,10 @@
             this.btnJuizes.Name = "btnJuizes";
             this.btnJuizes.Size = new System.Drawing.Size(297, 60);
             this.btnJuizes.TabIndex = 6;
+            this.btnJuizes.Tag = "Juizes";
             this.btnJuizes.Text = "Juízes";
             this.btnJuizes.UseVisualStyleBackColor = false;
+            this.btnJuizes.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnRute
             // 
@@ -284,8 +299,10 @@
             this.btnRute.Name = "btnRute";
             this.btnRute.Size = new System.Drawing.Size(297, 60);
             this.btnRute.TabIndex = 7;
+            this.btnRute.Tag = "Rute";
             this.btnRute.Text = "Rute";
             this.btnRute.UseVisualStyleBackColor = false;
+            this.btnRute.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnSamuel1
             // 
@@ -298,8 +315,10 @@
             this.btnSamuel1.Name = "btnSamuel1";
             this.btnSamuel1.Size = new System.Drawing.Size(297, 60);
             this.btnSamuel1.TabIndex = 8;
+            this.btnSamuel1.Tag = "Samuel1";
             this.btnSamuel1.Text = "1 Samuel";
             this.btnSamuel1.UseVisualStyleBackColor = false;
+            this.btnSamuel1.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnSamuel2
             // 
@@ -312,8 +331,10 @@
             this.btnSamuel2.Name = "btnSamuel2";
             this.btnSamuel2.Size = new System.Drawing.Size(297, 60);
             this.btnSamuel2.TabIndex = 9;
+            this.btnSamuel2.Tag = "Samuel2";
             this.btnSamuel2.Text = "2 Samuel";
             this.btnSamuel2.UseVisualStyleBackColor = false;
+            this.btnSamuel2.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnReis1
             // 
@@ -328,6 +349,7 @@
             this.btnReis1.TabIndex = 10;
             this.btnReis1.Text = "1 Reis";
             this.btnReis1.UseVisualStyleBackColor = false;
+            this.btnReis1.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnReis2
             // 
@@ -342,6 +364,7 @@
             this.btnReis2.TabIndex = 11;
             this.btnReis2.Text = "2 Reis";
             this.btnReis2.UseVisualStyleBackColor = false;
+            this.btnReis2.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnCronicas1
             // 
@@ -356,6 +379,7 @@
             this.btnCronicas1.TabIndex = 12;
             this.btnCronicas1.Text = "1 Crônicas";
             this.btnCronicas1.UseVisualStyleBackColor = false;
+            this.btnCronicas1.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnCronicas2
             // 
@@ -370,6 +394,7 @@
             this.btnCronicas2.TabIndex = 13;
             this.btnCronicas2.Text = "2 Crônicas";
             this.btnCronicas2.UseVisualStyleBackColor = false;
+            this.btnCronicas2.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnEsdras
             // 
@@ -384,6 +409,7 @@
             this.btnEsdras.TabIndex = 14;
             this.btnEsdras.Text = "Esdras";
             this.btnEsdras.UseVisualStyleBackColor = false;
+            this.btnEsdras.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnNeemias
             // 
@@ -398,6 +424,7 @@
             this.btnNeemias.TabIndex = 15;
             this.btnNeemias.Text = "Neemias";
             this.btnNeemias.UseVisualStyleBackColor = false;
+            this.btnNeemias.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnEster
             // 
@@ -412,6 +439,7 @@
             this.btnEster.TabIndex = 16;
             this.btnEster.Text = "Ester";
             this.btnEster.UseVisualStyleBackColor = false;
+            this.btnEster.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnJo
             // 
@@ -426,6 +454,7 @@
             this.btnJo.TabIndex = 17;
             this.btnJo.Text = "Jó";
             this.btnJo.UseVisualStyleBackColor = false;
+            this.btnJo.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnSalmos
             // 
@@ -440,14 +469,7 @@
             this.btnSalmos.TabIndex = 18;
             this.btnSalmos.Text = "Salmos";
             this.btnSalmos.UseVisualStyleBackColor = false;
-            // 
-            // panelBooksContainer
-            // 
-            this.panelBooksContainer.Controls.Add(this.flowBooksPanel);
-            this.panelBooksContainer.Location = new System.Drawing.Point(262, 26);
-            this.panelBooksContainer.Name = "panelBooksContainer";
-            this.panelBooksContainer.Size = new System.Drawing.Size(350, 463);
-            this.panelBooksContainer.TabIndex = 1;
+            this.btnSalmos.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnProverbios
             // 
@@ -462,6 +484,7 @@
             this.btnProverbios.TabIndex = 19;
             this.btnProverbios.Text = "Provérbios";
             this.btnProverbios.UseVisualStyleBackColor = false;
+            this.btnProverbios.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnEclesiastes
             // 
@@ -476,6 +499,7 @@
             this.btnEclesiastes.TabIndex = 20;
             this.btnEclesiastes.Text = "Eclesiastes";
             this.btnEclesiastes.UseVisualStyleBackColor = false;
+            this.btnEclesiastes.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnCanticos
             // 
@@ -490,6 +514,7 @@
             this.btnCanticos.TabIndex = 21;
             this.btnCanticos.Text = "Cântico dos Cânticos";
             this.btnCanticos.UseVisualStyleBackColor = false;
+            this.btnCanticos.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnIsaias
             // 
@@ -504,6 +529,7 @@
             this.btnIsaias.TabIndex = 22;
             this.btnIsaias.Text = "Isaías";
             this.btnIsaias.UseVisualStyleBackColor = false;
+            this.btnIsaias.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnJeremias
             // 
@@ -518,6 +544,7 @@
             this.btnJeremias.TabIndex = 23;
             this.btnJeremias.Text = "Jeremias";
             this.btnJeremias.UseVisualStyleBackColor = false;
+            this.btnJeremias.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnLamentacoes
             // 
@@ -532,6 +559,7 @@
             this.btnLamentacoes.TabIndex = 24;
             this.btnLamentacoes.Text = "Lamentações";
             this.btnLamentacoes.UseVisualStyleBackColor = false;
+            this.btnLamentacoes.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnEzequiel
             // 
@@ -546,6 +574,7 @@
             this.btnEzequiel.TabIndex = 25;
             this.btnEzequiel.Text = "Ezequiel";
             this.btnEzequiel.UseVisualStyleBackColor = false;
+            this.btnEzequiel.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnDaniel
             // 
@@ -560,6 +589,7 @@
             this.btnDaniel.TabIndex = 26;
             this.btnDaniel.Text = "Daniel";
             this.btnDaniel.UseVisualStyleBackColor = false;
+            this.btnDaniel.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnOseias
             // 
@@ -574,6 +604,7 @@
             this.btnOseias.TabIndex = 27;
             this.btnOseias.Text = "Oseias";
             this.btnOseias.UseVisualStyleBackColor = false;
+            this.btnOseias.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnJoel
             // 
@@ -588,6 +619,7 @@
             this.btnJoel.TabIndex = 28;
             this.btnJoel.Text = "Joel";
             this.btnJoel.UseVisualStyleBackColor = false;
+            this.btnJoel.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnAmos
             // 
@@ -602,6 +634,7 @@
             this.btnAmos.TabIndex = 29;
             this.btnAmos.Text = "Amós";
             this.btnAmos.UseVisualStyleBackColor = false;
+            this.btnAmos.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnObadias
             // 
@@ -616,6 +649,7 @@
             this.btnObadias.TabIndex = 30;
             this.btnObadias.Text = "Obadias";
             this.btnObadias.UseVisualStyleBackColor = false;
+            this.btnObadias.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnJonas
             // 
@@ -630,6 +664,7 @@
             this.btnJonas.TabIndex = 31;
             this.btnJonas.Text = "Jonas";
             this.btnJonas.UseVisualStyleBackColor = false;
+            this.btnJonas.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnMiqueias
             // 
@@ -644,6 +679,7 @@
             this.btnMiqueias.TabIndex = 32;
             this.btnMiqueias.Text = "Miqueias";
             this.btnMiqueias.UseVisualStyleBackColor = false;
+            this.btnMiqueias.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnNaum
             // 
@@ -658,6 +694,7 @@
             this.btnNaum.TabIndex = 33;
             this.btnNaum.Text = "Naum";
             this.btnNaum.UseVisualStyleBackColor = false;
+            this.btnNaum.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnHabacuque
             // 
@@ -672,6 +709,7 @@
             this.btnHabacuque.TabIndex = 34;
             this.btnHabacuque.Text = "Habacuque";
             this.btnHabacuque.UseVisualStyleBackColor = false;
+            this.btnHabacuque.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnSofonias
             // 
@@ -686,6 +724,7 @@
             this.btnSofonias.TabIndex = 35;
             this.btnSofonias.Text = "Sofonias";
             this.btnSofonias.UseVisualStyleBackColor = false;
+            this.btnSofonias.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnAgeu
             // 
@@ -700,6 +739,7 @@
             this.btnAgeu.TabIndex = 36;
             this.btnAgeu.Text = "Ageu";
             this.btnAgeu.UseVisualStyleBackColor = false;
+            this.btnAgeu.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnZacarias
             // 
@@ -714,6 +754,7 @@
             this.btnZacarias.TabIndex = 37;
             this.btnZacarias.Text = "Zacarias";
             this.btnZacarias.UseVisualStyleBackColor = false;
+            this.btnZacarias.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnMalaquias
             // 
@@ -728,6 +769,7 @@
             this.btnMalaquias.TabIndex = 38;
             this.btnMalaquias.Text = "Malaquias";
             this.btnMalaquias.UseVisualStyleBackColor = false;
+            this.btnMalaquias.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnMateus
             // 
@@ -742,6 +784,7 @@
             this.btnMateus.TabIndex = 39;
             this.btnMateus.Text = "Mateus";
             this.btnMateus.UseVisualStyleBackColor = false;
+            this.btnMateus.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnMarcos
             // 
@@ -756,6 +799,7 @@
             this.btnMarcos.TabIndex = 40;
             this.btnMarcos.Text = "Marcos";
             this.btnMarcos.UseVisualStyleBackColor = false;
+            this.btnMarcos.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnLucas
             // 
@@ -770,6 +814,7 @@
             this.btnLucas.TabIndex = 41;
             this.btnLucas.Text = "Lucas";
             this.btnLucas.UseVisualStyleBackColor = false;
+            this.btnLucas.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnJoao
             // 
@@ -784,6 +829,7 @@
             this.btnJoao.TabIndex = 42;
             this.btnJoao.Text = "João";
             this.btnJoao.UseVisualStyleBackColor = false;
+            this.btnJoao.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnAtos
             // 
@@ -798,6 +844,7 @@
             this.btnAtos.TabIndex = 43;
             this.btnAtos.Text = "Atos";
             this.btnAtos.UseVisualStyleBackColor = false;
+            this.btnAtos.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnRomanos
             // 
@@ -812,6 +859,7 @@
             this.btnRomanos.TabIndex = 44;
             this.btnRomanos.Text = "Romanos";
             this.btnRomanos.UseVisualStyleBackColor = false;
+            this.btnRomanos.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnCorintios1
             // 
@@ -826,6 +874,7 @@
             this.btnCorintios1.TabIndex = 45;
             this.btnCorintios1.Text = "1 Coríntios";
             this.btnCorintios1.UseVisualStyleBackColor = false;
+            this.btnCorintios1.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnCorintios2
             // 
@@ -840,6 +889,7 @@
             this.btnCorintios2.TabIndex = 46;
             this.btnCorintios2.Text = "2 Coríntios";
             this.btnCorintios2.UseVisualStyleBackColor = false;
+            this.btnCorintios2.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnGalatas
             // 
@@ -854,6 +904,7 @@
             this.btnGalatas.TabIndex = 47;
             this.btnGalatas.Text = "Gálatas";
             this.btnGalatas.UseVisualStyleBackColor = false;
+            this.btnGalatas.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnEfesios
             // 
@@ -868,6 +919,7 @@
             this.btnEfesios.TabIndex = 48;
             this.btnEfesios.Text = "Efésios";
             this.btnEfesios.UseVisualStyleBackColor = false;
+            this.btnEfesios.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnFilipenses
             // 
@@ -882,6 +934,7 @@
             this.btnFilipenses.TabIndex = 49;
             this.btnFilipenses.Text = "Filipenses";
             this.btnFilipenses.UseVisualStyleBackColor = false;
+            this.btnFilipenses.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnColossenses
             // 
@@ -896,6 +949,7 @@
             this.btnColossenses.TabIndex = 50;
             this.btnColossenses.Text = "Colossenses";
             this.btnColossenses.UseVisualStyleBackColor = false;
+            this.btnColossenses.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnTessalonicenses1
             // 
@@ -910,6 +964,7 @@
             this.btnTessalonicenses1.TabIndex = 51;
             this.btnTessalonicenses1.Text = "1 Tessalonicenses";
             this.btnTessalonicenses1.UseVisualStyleBackColor = false;
+            this.btnTessalonicenses1.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnTessalonicenses2
             // 
@@ -924,6 +979,7 @@
             this.btnTessalonicenses2.TabIndex = 52;
             this.btnTessalonicenses2.Text = "2 Tessalonicenses";
             this.btnTessalonicenses2.UseVisualStyleBackColor = false;
+            this.btnTessalonicenses2.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnTimoteo1
             // 
@@ -938,6 +994,7 @@
             this.btnTimoteo1.TabIndex = 53;
             this.btnTimoteo1.Text = "1 Timóteo";
             this.btnTimoteo1.UseVisualStyleBackColor = false;
+            this.btnTimoteo1.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnTimoteo2
             // 
@@ -952,6 +1009,7 @@
             this.btnTimoteo2.TabIndex = 54;
             this.btnTimoteo2.Text = "2 Timóteo";
             this.btnTimoteo2.UseVisualStyleBackColor = false;
+            this.btnTimoteo2.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnTito
             // 
@@ -966,6 +1024,7 @@
             this.btnTito.TabIndex = 55;
             this.btnTito.Text = "Tito";
             this.btnTito.UseVisualStyleBackColor = false;
+            this.btnTito.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnFilemom
             // 
@@ -980,6 +1039,7 @@
             this.btnFilemom.TabIndex = 56;
             this.btnFilemom.Text = "Filemom";
             this.btnFilemom.UseVisualStyleBackColor = false;
+            this.btnFilemom.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnHebreus
             // 
@@ -994,6 +1054,7 @@
             this.btnHebreus.TabIndex = 57;
             this.btnHebreus.Text = "Hebreus";
             this.btnHebreus.UseVisualStyleBackColor = false;
+            this.btnHebreus.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnTiago
             // 
@@ -1008,6 +1069,7 @@
             this.btnTiago.TabIndex = 58;
             this.btnTiago.Text = "Tiago";
             this.btnTiago.UseVisualStyleBackColor = false;
+            this.btnTiago.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnPedro1
             // 
@@ -1022,6 +1084,7 @@
             this.btnPedro1.TabIndex = 59;
             this.btnPedro1.Text = "1 Pedro";
             this.btnPedro1.UseVisualStyleBackColor = false;
+            this.btnPedro1.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnPedro2
             // 
@@ -1036,6 +1099,7 @@
             this.btnPedro2.TabIndex = 60;
             this.btnPedro2.Text = "2 Pedro";
             this.btnPedro2.UseVisualStyleBackColor = false;
+            this.btnPedro2.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnJoao1
             // 
@@ -1050,6 +1114,7 @@
             this.btnJoao1.TabIndex = 61;
             this.btnJoao1.Text = "1 João";
             this.btnJoao1.UseVisualStyleBackColor = false;
+            this.btnJoao1.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnJoao2
             // 
@@ -1064,6 +1129,7 @@
             this.btnJoao2.TabIndex = 62;
             this.btnJoao2.Text = "2 João";
             this.btnJoao2.UseVisualStyleBackColor = false;
+            this.btnJoao2.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnJoao3
             // 
@@ -1078,6 +1144,7 @@
             this.btnJoao3.TabIndex = 63;
             this.btnJoao3.Text = "3 João";
             this.btnJoao3.UseVisualStyleBackColor = false;
+            this.btnJoao3.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnJudas
             // 
@@ -1092,6 +1159,7 @@
             this.btnJudas.TabIndex = 64;
             this.btnJudas.Text = "Judas";
             this.btnJudas.UseVisualStyleBackColor = false;
+            this.btnJudas.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnApocalipse
             // 
@@ -1106,6 +1174,15 @@
             this.btnApocalipse.TabIndex = 65;
             this.btnApocalipse.Text = "Apocalipse";
             this.btnApocalipse.UseVisualStyleBackColor = false;
+            this.btnApocalipse.Click += new System.EventHandler(this.booksButton_Click);
+            // 
+            // panelBooksContainer
+            // 
+            this.panelBooksContainer.Controls.Add(this.flowBooksPanel);
+            this.panelBooksContainer.Location = new System.Drawing.Point(262, 26);
+            this.panelBooksContainer.Name = "panelBooksContainer";
+            this.panelBooksContainer.Size = new System.Drawing.Size(350, 463);
+            this.panelBooksContainer.TabIndex = 1;
             // 
             // UCBibleBooks
             // 
