@@ -347,6 +347,7 @@
             this.btnReis1.Name = "btnReis1";
             this.btnReis1.Size = new System.Drawing.Size(297, 60);
             this.btnReis1.TabIndex = 10;
+            this.btnReis1.Tag = "Reis1";
             this.btnReis1.Text = "1 Reis";
             this.btnReis1.UseVisualStyleBackColor = false;
             this.btnReis1.Click += new System.EventHandler(this.booksButton_Click);
@@ -362,6 +363,7 @@
             this.btnReis2.Name = "btnReis2";
             this.btnReis2.Size = new System.Drawing.Size(297, 60);
             this.btnReis2.TabIndex = 11;
+            this.btnReis2.Tag = "Reis2";
             this.btnReis2.Text = "2 Reis";
             this.btnReis2.UseVisualStyleBackColor = false;
             this.btnReis2.Click += new System.EventHandler(this.booksButton_Click);
@@ -377,6 +379,7 @@
             this.btnCronicas1.Name = "btnCronicas1";
             this.btnCronicas1.Size = new System.Drawing.Size(297, 60);
             this.btnCronicas1.TabIndex = 12;
+            this.btnCronicas1.Tag = "Cronicas1";
             this.btnCronicas1.Text = "1 Crônicas";
             this.btnCronicas1.UseVisualStyleBackColor = false;
             this.btnCronicas1.Click += new System.EventHandler(this.booksButton_Click);
@@ -392,6 +395,7 @@
             this.btnCronicas2.Name = "btnCronicas2";
             this.btnCronicas2.Size = new System.Drawing.Size(297, 60);
             this.btnCronicas2.TabIndex = 13;
+            this.btnCronicas2.Tag = "Cronicas2";
             this.btnCronicas2.Text = "2 Crônicas";
             this.btnCronicas2.UseVisualStyleBackColor = false;
             this.btnCronicas2.Click += new System.EventHandler(this.booksButton_Click);
@@ -407,6 +411,7 @@
             this.btnEsdras.Name = "btnEsdras";
             this.btnEsdras.Size = new System.Drawing.Size(297, 60);
             this.btnEsdras.TabIndex = 14;
+            this.btnEsdras.Tag = "Esdras";
             this.btnEsdras.Text = "Esdras";
             this.btnEsdras.UseVisualStyleBackColor = false;
             this.btnEsdras.Click += new System.EventHandler(this.booksButton_Click);
@@ -422,6 +427,7 @@
             this.btnNeemias.Name = "btnNeemias";
             this.btnNeemias.Size = new System.Drawing.Size(297, 60);
             this.btnNeemias.TabIndex = 15;
+            this.btnNeemias.Tag = "Neemias";
             this.btnNeemias.Text = "Neemias";
             this.btnNeemias.UseVisualStyleBackColor = false;
             this.btnNeemias.Click += new System.EventHandler(this.booksButton_Click);
@@ -437,6 +443,7 @@
             this.btnEster.Name = "btnEster";
             this.btnEster.Size = new System.Drawing.Size(297, 60);
             this.btnEster.TabIndex = 16;
+            this.btnEster.Tag = "Ester";
             this.btnEster.Text = "Ester";
             this.btnEster.UseVisualStyleBackColor = false;
             this.btnEster.Click += new System.EventHandler(this.booksButton_Click);
@@ -452,6 +459,7 @@
             this.btnJo.Name = "btnJo";
             this.btnJo.Size = new System.Drawing.Size(297, 60);
             this.btnJo.TabIndex = 17;
+            this.btnJo.Tag = "Jo";
             this.btnJo.Text = "Jó";
             this.btnJo.UseVisualStyleBackColor = false;
             this.btnJo.Click += new System.EventHandler(this.booksButton_Click);
@@ -467,6 +475,7 @@
             this.btnSalmos.Name = "btnSalmos";
             this.btnSalmos.Size = new System.Drawing.Size(297, 60);
             this.btnSalmos.TabIndex = 18;
+            this.btnSalmos.Tag = "Salmos";
             this.btnSalmos.Text = "Salmos";
             this.btnSalmos.UseVisualStyleBackColor = false;
             this.btnSalmos.Click += new System.EventHandler(this.booksButton_Click);
@@ -482,6 +491,7 @@
             this.btnProverbios.Name = "btnProverbios";
             this.btnProverbios.Size = new System.Drawing.Size(297, 60);
             this.btnProverbios.TabIndex = 19;
+            this.btnProverbios.Tag = "Proverbios";
             this.btnProverbios.Text = "Provérbios";
             this.btnProverbios.UseVisualStyleBackColor = false;
             this.btnProverbios.Click += new System.EventHandler(this.booksButton_Click);
@@ -497,6 +507,7 @@
             this.btnEclesiastes.Name = "btnEclesiastes";
             this.btnEclesiastes.Size = new System.Drawing.Size(297, 60);
             this.btnEclesiastes.TabIndex = 20;
+            this.btnEclesiastes.Tag = "Eclesiastes";
             this.btnEclesiastes.Text = "Eclesiastes";
             this.btnEclesiastes.UseVisualStyleBackColor = false;
             this.btnEclesiastes.Click += new System.EventHandler(this.booksButton_Click);
@@ -512,6 +523,7 @@
             this.btnCanticos.Name = "btnCanticos";
             this.btnCanticos.Size = new System.Drawing.Size(297, 60);
             this.btnCanticos.TabIndex = 21;
+            this.btnCanticos.Tag = "Canticos";
             this.btnCanticos.Text = "Cântico dos Cânticos";
             this.btnCanticos.UseVisualStyleBackColor = false;
             this.btnCanticos.Click += new System.EventHandler(this.booksButton_Click);
@@ -527,6 +539,7 @@
             this.btnIsaias.Name = "btnIsaias";
             this.btnIsaias.Size = new System.Drawing.Size(297, 60);
             this.btnIsaias.TabIndex = 22;
+            this.btnIsaias.Tag = "Isaias";
             this.btnIsaias.Text = "Isaías";
             this.btnIsaias.UseVisualStyleBackColor = false;
             this.btnIsaias.Click += new System.EventHandler(this.booksButton_Click);
@@ -542,6 +555,7 @@
             this.btnJeremias.Name = "btnJeremias";
             this.btnJeremias.Size = new System.Drawing.Size(297, 60);
             this.btnJeremias.TabIndex = 23;
+            this.btnJeremias.Tag = "Jeremias";
             this.btnJeremias.Text = "Jeremias";
             this.btnJeremias.UseVisualStyleBackColor = false;
             this.btnJeremias.Click += new System.EventHandler(this.booksButton_Click);
@@ -557,6 +571,7 @@
             this.btnLamentacoes.Name = "btnLamentacoes";
             this.btnLamentacoes.Size = new System.Drawing.Size(297, 60);
             this.btnLamentacoes.TabIndex = 24;
+            this.btnLamentacoes.Tag = "Lamentacoes";
             this.btnLamentacoes.Text = "Lamentações";
             this.btnLamentacoes.UseVisualStyleBackColor = false;
             this.btnLamentacoes.Click += new System.EventHandler(this.booksButton_Click);
@@ -572,6 +587,7 @@
             this.btnEzequiel.Name = "btnEzequiel";
             this.btnEzequiel.Size = new System.Drawing.Size(297, 60);
             this.btnEzequiel.TabIndex = 25;
+            this.btnEzequiel.Tag = "Ezequiel";
             this.btnEzequiel.Text = "Ezequiel";
             this.btnEzequiel.UseVisualStyleBackColor = false;
             this.btnEzequiel.Click += new System.EventHandler(this.booksButton_Click);
@@ -587,6 +603,7 @@
             this.btnDaniel.Name = "btnDaniel";
             this.btnDaniel.Size = new System.Drawing.Size(297, 60);
             this.btnDaniel.TabIndex = 26;
+            this.btnDaniel.Tag = "Daniel";
             this.btnDaniel.Text = "Daniel";
             this.btnDaniel.UseVisualStyleBackColor = false;
             this.btnDaniel.Click += new System.EventHandler(this.booksButton_Click);
@@ -602,6 +619,7 @@
             this.btnOseias.Name = "btnOseias";
             this.btnOseias.Size = new System.Drawing.Size(297, 60);
             this.btnOseias.TabIndex = 27;
+            this.btnOseias.Tag = "Oseias";
             this.btnOseias.Text = "Oseias";
             this.btnOseias.UseVisualStyleBackColor = false;
             this.btnOseias.Click += new System.EventHandler(this.booksButton_Click);
@@ -617,6 +635,7 @@
             this.btnJoel.Name = "btnJoel";
             this.btnJoel.Size = new System.Drawing.Size(297, 60);
             this.btnJoel.TabIndex = 28;
+            this.btnJoel.Tag = "Joel";
             this.btnJoel.Text = "Joel";
             this.btnJoel.UseVisualStyleBackColor = false;
             this.btnJoel.Click += new System.EventHandler(this.booksButton_Click);
@@ -632,6 +651,7 @@
             this.btnAmos.Name = "btnAmos";
             this.btnAmos.Size = new System.Drawing.Size(297, 60);
             this.btnAmos.TabIndex = 29;
+            this.btnAmos.Tag = "Amos";
             this.btnAmos.Text = "Amós";
             this.btnAmos.UseVisualStyleBackColor = false;
             this.btnAmos.Click += new System.EventHandler(this.booksButton_Click);
@@ -647,6 +667,7 @@
             this.btnObadias.Name = "btnObadias";
             this.btnObadias.Size = new System.Drawing.Size(297, 60);
             this.btnObadias.TabIndex = 30;
+            this.btnObadias.Tag = "Obadias";
             this.btnObadias.Text = "Obadias";
             this.btnObadias.UseVisualStyleBackColor = false;
             this.btnObadias.Click += new System.EventHandler(this.booksButton_Click);
@@ -662,6 +683,7 @@
             this.btnJonas.Name = "btnJonas";
             this.btnJonas.Size = new System.Drawing.Size(297, 60);
             this.btnJonas.TabIndex = 31;
+            this.btnJonas.Tag = "Jonas";
             this.btnJonas.Text = "Jonas";
             this.btnJonas.UseVisualStyleBackColor = false;
             this.btnJonas.Click += new System.EventHandler(this.booksButton_Click);
@@ -677,6 +699,7 @@
             this.btnMiqueias.Name = "btnMiqueias";
             this.btnMiqueias.Size = new System.Drawing.Size(297, 60);
             this.btnMiqueias.TabIndex = 32;
+            this.btnMiqueias.Tag = "Miqueias";
             this.btnMiqueias.Text = "Miqueias";
             this.btnMiqueias.UseVisualStyleBackColor = false;
             this.btnMiqueias.Click += new System.EventHandler(this.booksButton_Click);
@@ -692,6 +715,7 @@
             this.btnNaum.Name = "btnNaum";
             this.btnNaum.Size = new System.Drawing.Size(297, 60);
             this.btnNaum.TabIndex = 33;
+            this.btnNaum.Tag = "Naum";
             this.btnNaum.Text = "Naum";
             this.btnNaum.UseVisualStyleBackColor = false;
             this.btnNaum.Click += new System.EventHandler(this.booksButton_Click);
@@ -707,6 +731,7 @@
             this.btnHabacuque.Name = "btnHabacuque";
             this.btnHabacuque.Size = new System.Drawing.Size(297, 60);
             this.btnHabacuque.TabIndex = 34;
+            this.btnHabacuque.Tag = "Habacuque";
             this.btnHabacuque.Text = "Habacuque";
             this.btnHabacuque.UseVisualStyleBackColor = false;
             this.btnHabacuque.Click += new System.EventHandler(this.booksButton_Click);
@@ -722,6 +747,7 @@
             this.btnSofonias.Name = "btnSofonias";
             this.btnSofonias.Size = new System.Drawing.Size(297, 60);
             this.btnSofonias.TabIndex = 35;
+            this.btnSofonias.Tag = "Sofonias";
             this.btnSofonias.Text = "Sofonias";
             this.btnSofonias.UseVisualStyleBackColor = false;
             this.btnSofonias.Click += new System.EventHandler(this.booksButton_Click);
@@ -737,6 +763,7 @@
             this.btnAgeu.Name = "btnAgeu";
             this.btnAgeu.Size = new System.Drawing.Size(297, 60);
             this.btnAgeu.TabIndex = 36;
+            this.btnAgeu.Tag = "Ageu";
             this.btnAgeu.Text = "Ageu";
             this.btnAgeu.UseVisualStyleBackColor = false;
             this.btnAgeu.Click += new System.EventHandler(this.booksButton_Click);
@@ -752,6 +779,7 @@
             this.btnZacarias.Name = "btnZacarias";
             this.btnZacarias.Size = new System.Drawing.Size(297, 60);
             this.btnZacarias.TabIndex = 37;
+            this.btnZacarias.Tag = "Zacarias";
             this.btnZacarias.Text = "Zacarias";
             this.btnZacarias.UseVisualStyleBackColor = false;
             this.btnZacarias.Click += new System.EventHandler(this.booksButton_Click);
@@ -767,6 +795,7 @@
             this.btnMalaquias.Name = "btnMalaquias";
             this.btnMalaquias.Size = new System.Drawing.Size(297, 60);
             this.btnMalaquias.TabIndex = 38;
+            this.btnMalaquias.Tag = "Malaquias";
             this.btnMalaquias.Text = "Malaquias";
             this.btnMalaquias.UseVisualStyleBackColor = false;
             this.btnMalaquias.Click += new System.EventHandler(this.booksButton_Click);
@@ -782,6 +811,7 @@
             this.btnMateus.Name = "btnMateus";
             this.btnMateus.Size = new System.Drawing.Size(297, 60);
             this.btnMateus.TabIndex = 39;
+            this.btnMateus.Tag = "Mateus";
             this.btnMateus.Text = "Mateus";
             this.btnMateus.UseVisualStyleBackColor = false;
             this.btnMateus.Click += new System.EventHandler(this.booksButton_Click);
@@ -797,6 +827,7 @@
             this.btnMarcos.Name = "btnMarcos";
             this.btnMarcos.Size = new System.Drawing.Size(297, 60);
             this.btnMarcos.TabIndex = 40;
+            this.btnMarcos.Tag = "Marcos";
             this.btnMarcos.Text = "Marcos";
             this.btnMarcos.UseVisualStyleBackColor = false;
             this.btnMarcos.Click += new System.EventHandler(this.booksButton_Click);
@@ -812,6 +843,7 @@
             this.btnLucas.Name = "btnLucas";
             this.btnLucas.Size = new System.Drawing.Size(297, 60);
             this.btnLucas.TabIndex = 41;
+            this.btnLucas.Tag = "Lucas";
             this.btnLucas.Text = "Lucas";
             this.btnLucas.UseVisualStyleBackColor = false;
             this.btnLucas.Click += new System.EventHandler(this.booksButton_Click);
@@ -827,6 +859,7 @@
             this.btnJoao.Name = "btnJoao";
             this.btnJoao.Size = new System.Drawing.Size(297, 60);
             this.btnJoao.TabIndex = 42;
+            this.btnJoao.Tag = "Joao";
             this.btnJoao.Text = "João";
             this.btnJoao.UseVisualStyleBackColor = false;
             this.btnJoao.Click += new System.EventHandler(this.booksButton_Click);
@@ -842,6 +875,7 @@
             this.btnAtos.Name = "btnAtos";
             this.btnAtos.Size = new System.Drawing.Size(297, 60);
             this.btnAtos.TabIndex = 43;
+            this.btnAtos.Tag = "Atos";
             this.btnAtos.Text = "Atos";
             this.btnAtos.UseVisualStyleBackColor = false;
             this.btnAtos.Click += new System.EventHandler(this.booksButton_Click);
@@ -857,6 +891,7 @@
             this.btnRomanos.Name = "btnRomanos";
             this.btnRomanos.Size = new System.Drawing.Size(297, 60);
             this.btnRomanos.TabIndex = 44;
+            this.btnRomanos.Tag = "Romanos";
             this.btnRomanos.Text = "Romanos";
             this.btnRomanos.UseVisualStyleBackColor = false;
             this.btnRomanos.Click += new System.EventHandler(this.booksButton_Click);
@@ -872,6 +907,7 @@
             this.btnCorintios1.Name = "btnCorintios1";
             this.btnCorintios1.Size = new System.Drawing.Size(297, 60);
             this.btnCorintios1.TabIndex = 45;
+            this.btnCorintios1.Tag = "Corintios1";
             this.btnCorintios1.Text = "1 Coríntios";
             this.btnCorintios1.UseVisualStyleBackColor = false;
             this.btnCorintios1.Click += new System.EventHandler(this.booksButton_Click);
@@ -887,6 +923,7 @@
             this.btnCorintios2.Name = "btnCorintios2";
             this.btnCorintios2.Size = new System.Drawing.Size(297, 60);
             this.btnCorintios2.TabIndex = 46;
+            this.btnCorintios2.Tag = "Corintios2";
             this.btnCorintios2.Text = "2 Coríntios";
             this.btnCorintios2.UseVisualStyleBackColor = false;
             this.btnCorintios2.Click += new System.EventHandler(this.booksButton_Click);
@@ -902,6 +939,7 @@
             this.btnGalatas.Name = "btnGalatas";
             this.btnGalatas.Size = new System.Drawing.Size(297, 60);
             this.btnGalatas.TabIndex = 47;
+            this.btnGalatas.Tag = "Galatas";
             this.btnGalatas.Text = "Gálatas";
             this.btnGalatas.UseVisualStyleBackColor = false;
             this.btnGalatas.Click += new System.EventHandler(this.booksButton_Click);
@@ -917,6 +955,7 @@
             this.btnEfesios.Name = "btnEfesios";
             this.btnEfesios.Size = new System.Drawing.Size(297, 60);
             this.btnEfesios.TabIndex = 48;
+            this.btnEfesios.Tag = "Efesios";
             this.btnEfesios.Text = "Efésios";
             this.btnEfesios.UseVisualStyleBackColor = false;
             this.btnEfesios.Click += new System.EventHandler(this.booksButton_Click);
@@ -932,6 +971,7 @@
             this.btnFilipenses.Name = "btnFilipenses";
             this.btnFilipenses.Size = new System.Drawing.Size(297, 60);
             this.btnFilipenses.TabIndex = 49;
+            this.btnFilipenses.Tag = "Filipenses";
             this.btnFilipenses.Text = "Filipenses";
             this.btnFilipenses.UseVisualStyleBackColor = false;
             this.btnFilipenses.Click += new System.EventHandler(this.booksButton_Click);
@@ -947,6 +987,7 @@
             this.btnColossenses.Name = "btnColossenses";
             this.btnColossenses.Size = new System.Drawing.Size(297, 60);
             this.btnColossenses.TabIndex = 50;
+            this.btnColossenses.Tag = "Colossenses";
             this.btnColossenses.Text = "Colossenses";
             this.btnColossenses.UseVisualStyleBackColor = false;
             this.btnColossenses.Click += new System.EventHandler(this.booksButton_Click);
@@ -962,6 +1003,7 @@
             this.btnTessalonicenses1.Name = "btnTessalonicenses1";
             this.btnTessalonicenses1.Size = new System.Drawing.Size(297, 60);
             this.btnTessalonicenses1.TabIndex = 51;
+            this.btnTessalonicenses1.Tag = "Tessalonicenses1";
             this.btnTessalonicenses1.Text = "1 Tessalonicenses";
             this.btnTessalonicenses1.UseVisualStyleBackColor = false;
             this.btnTessalonicenses1.Click += new System.EventHandler(this.booksButton_Click);
@@ -977,6 +1019,7 @@
             this.btnTessalonicenses2.Name = "btnTessalonicenses2";
             this.btnTessalonicenses2.Size = new System.Drawing.Size(297, 60);
             this.btnTessalonicenses2.TabIndex = 52;
+            this.btnTessalonicenses2.Tag = "Tessalonicenses2";
             this.btnTessalonicenses2.Text = "2 Tessalonicenses";
             this.btnTessalonicenses2.UseVisualStyleBackColor = false;
             this.btnTessalonicenses2.Click += new System.EventHandler(this.booksButton_Click);
@@ -992,6 +1035,7 @@
             this.btnTimoteo1.Name = "btnTimoteo1";
             this.btnTimoteo1.Size = new System.Drawing.Size(297, 60);
             this.btnTimoteo1.TabIndex = 53;
+            this.btnTimoteo1.Tag = "Timoteo1";
             this.btnTimoteo1.Text = "1 Timóteo";
             this.btnTimoteo1.UseVisualStyleBackColor = false;
             this.btnTimoteo1.Click += new System.EventHandler(this.booksButton_Click);
@@ -1007,6 +1051,7 @@
             this.btnTimoteo2.Name = "btnTimoteo2";
             this.btnTimoteo2.Size = new System.Drawing.Size(297, 60);
             this.btnTimoteo2.TabIndex = 54;
+            this.btnTimoteo2.Tag = "Timoteo2";
             this.btnTimoteo2.Text = "2 Timóteo";
             this.btnTimoteo2.UseVisualStyleBackColor = false;
             this.btnTimoteo2.Click += new System.EventHandler(this.booksButton_Click);
@@ -1022,6 +1067,7 @@
             this.btnTito.Name = "btnTito";
             this.btnTito.Size = new System.Drawing.Size(297, 60);
             this.btnTito.TabIndex = 55;
+            this.btnTito.Tag = "Tito";
             this.btnTito.Text = "Tito";
             this.btnTito.UseVisualStyleBackColor = false;
             this.btnTito.Click += new System.EventHandler(this.booksButton_Click);
@@ -1037,6 +1083,7 @@
             this.btnFilemom.Name = "btnFilemom";
             this.btnFilemom.Size = new System.Drawing.Size(297, 60);
             this.btnFilemom.TabIndex = 56;
+            this.btnFilemom.Tag = "Filemon";
             this.btnFilemom.Text = "Filemom";
             this.btnFilemom.UseVisualStyleBackColor = false;
             this.btnFilemom.Click += new System.EventHandler(this.booksButton_Click);
@@ -1052,6 +1099,7 @@
             this.btnHebreus.Name = "btnHebreus";
             this.btnHebreus.Size = new System.Drawing.Size(297, 60);
             this.btnHebreus.TabIndex = 57;
+            this.btnHebreus.Tag = "Hebreus";
             this.btnHebreus.Text = "Hebreus";
             this.btnHebreus.UseVisualStyleBackColor = false;
             this.btnHebreus.Click += new System.EventHandler(this.booksButton_Click);
@@ -1067,6 +1115,7 @@
             this.btnTiago.Name = "btnTiago";
             this.btnTiago.Size = new System.Drawing.Size(297, 60);
             this.btnTiago.TabIndex = 58;
+            this.btnTiago.Tag = "Tiago";
             this.btnTiago.Text = "Tiago";
             this.btnTiago.UseVisualStyleBackColor = false;
             this.btnTiago.Click += new System.EventHandler(this.booksButton_Click);
@@ -1082,6 +1131,7 @@
             this.btnPedro1.Name = "btnPedro1";
             this.btnPedro1.Size = new System.Drawing.Size(297, 60);
             this.btnPedro1.TabIndex = 59;
+            this.btnPedro1.Tag = "Pedro1";
             this.btnPedro1.Text = "1 Pedro";
             this.btnPedro1.UseVisualStyleBackColor = false;
             this.btnPedro1.Click += new System.EventHandler(this.booksButton_Click);
@@ -1097,6 +1147,7 @@
             this.btnPedro2.Name = "btnPedro2";
             this.btnPedro2.Size = new System.Drawing.Size(297, 60);
             this.btnPedro2.TabIndex = 60;
+            this.btnPedro2.Tag = "Pedro2";
             this.btnPedro2.Text = "2 Pedro";
             this.btnPedro2.UseVisualStyleBackColor = false;
             this.btnPedro2.Click += new System.EventHandler(this.booksButton_Click);
@@ -1112,6 +1163,7 @@
             this.btnJoao1.Name = "btnJoao1";
             this.btnJoao1.Size = new System.Drawing.Size(297, 60);
             this.btnJoao1.TabIndex = 61;
+            this.btnJoao1.Tag = "Joao1";
             this.btnJoao1.Text = "1 João";
             this.btnJoao1.UseVisualStyleBackColor = false;
             this.btnJoao1.Click += new System.EventHandler(this.booksButton_Click);
@@ -1127,6 +1179,7 @@
             this.btnJoao2.Name = "btnJoao2";
             this.btnJoao2.Size = new System.Drawing.Size(297, 60);
             this.btnJoao2.TabIndex = 62;
+            this.btnJoao2.Tag = "Joao2";
             this.btnJoao2.Text = "2 João";
             this.btnJoao2.UseVisualStyleBackColor = false;
             this.btnJoao2.Click += new System.EventHandler(this.booksButton_Click);
@@ -1142,6 +1195,7 @@
             this.btnJoao3.Name = "btnJoao3";
             this.btnJoao3.Size = new System.Drawing.Size(297, 60);
             this.btnJoao3.TabIndex = 63;
+            this.btnJoao3.Tag = "Joao3";
             this.btnJoao3.Text = "3 João";
             this.btnJoao3.UseVisualStyleBackColor = false;
             this.btnJoao3.Click += new System.EventHandler(this.booksButton_Click);
@@ -1157,6 +1211,7 @@
             this.btnJudas.Name = "btnJudas";
             this.btnJudas.Size = new System.Drawing.Size(297, 60);
             this.btnJudas.TabIndex = 64;
+            this.btnJudas.Tag = "Judas";
             this.btnJudas.Text = "Judas";
             this.btnJudas.UseVisualStyleBackColor = false;
             this.btnJudas.Click += new System.EventHandler(this.booksButton_Click);
@@ -1172,6 +1227,7 @@
             this.btnApocalipse.Name = "btnApocalipse";
             this.btnApocalipse.Size = new System.Drawing.Size(297, 60);
             this.btnApocalipse.TabIndex = 65;
+            this.btnApocalipse.Tag = "Apocalipse";
             this.btnApocalipse.Text = "Apocalipse";
             this.btnApocalipse.UseVisualStyleBackColor = false;
             this.btnApocalipse.Click += new System.EventHandler(this.booksButton_Click);

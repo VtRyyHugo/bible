@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bible.Entities.Exceptions;
+using Entities;
 
 namespace Bible
 {
@@ -20,6 +15,15 @@ namespace Bible
         private void booksButton_Click(object sender, EventArgs e )
         {
             string tag = ((Button)sender).Tag.ToString();
+            try
+            {
+                int numberFiles = FileManager.FilesCounter(tag);
+            }
+            catch (DomainException error)
+            {
+                MessageBox.Show(error.Message);
+            }
+            
         }
     }
 }
