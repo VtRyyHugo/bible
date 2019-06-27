@@ -6,51 +6,43 @@ namespace Entities
 {
     class DynamicMenu 
     {
-        public int RowCount { get; private set; }
-        public int ColumnCount { get; private set; }
-        public TableLayoutPanel TablePanel { get; private set; }
+        public FlowLayoutPanel FlowPanel { get; private set; }
 
-        public DynamicMenu(int rowCount, int columnCount)
+        public DynamicMenu()
         {
-            TablePanel = new TableLayoutPanel();
-            RowCount = rowCount;
-            ColumnCount = columnCount;
+            FlowPanel = new FlowLayoutPanel();  
         }
 
-        public TableLayoutPanel GenerateMenu()
+        public FlowLayoutPanel GenerateMenu(int n)
         {
-            TablePanel.RowCount = RowCount;
-            TablePanel.ColumnCount = ColumnCount;
-            TablePanel.RowStyles.Clear();
-            TablePanel.ColumnStyles.Clear();
-
-            for (int i = 0; i < ColumnCount; i++)
+            for (int i = 0; i < n; i++)
             {
-                TablePanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100 / ColumnCount));
-            }
-            for (int i = 0; i < RowCount; i++)
-            {
-                TablePanel.RowStyles.Add(new RowStyle(SizeType.Percent, 100 / RowCount));
-            }
-            for (int i = 0; i < RowCount; i++)
-            {
-                for (int j = 0; j < ColumnCount; j++)
-                {
-                    Button button = new Button();
-                    button.Text = string.Format("{0}{1}", i, j);
-                    button.Font = new Font(button.Font, FontStyle.Bold);
-                    button.Name = string.Format("{0}{1}", i, j);
-                    button.Width = 80;
-                    button.Height = 80;
-                    button.Dock = DockStyle.Fill;
-                    button.FlatStyle = FlatStyle.Flat;
-                    button.FlatAppearance.MouseOverBackColor = Color.FromArgb(85, 165, 228);
-                    button.BackColor = Color.White;
-                    TablePanel.Controls.Add(button, j, i);
-                }
+                FlowPanel.Controls.Add(Btn(i));
             }
 
-            return TablePanel;
+            return FlowPanel;
+        }
+
+        private Button Btn(int i)
+        {
+            Button button = new Button();
+            button.Text = (i + 1).ToString();
+            button.Font = new Font(button.Font, FontStyle.Bold);
+            button.Name = (i + 1).ToString();
+            button.Tag = i;
+            button.Width = 56;
+            button.Height = 50;
+            button.FlatStyle = FlatStyle.Flat;
+            button.FlatAppearance.MouseOverBackColor = Color.FromArgb(85, 165, 228);
+            button.BackColor = Color.White;
+            button.Click += btn_Click;
+
+            return button;
+        }
+
+        public void btn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"Index button tag: {((Button)sender).Tag.ToString()}");
         }
 
     }

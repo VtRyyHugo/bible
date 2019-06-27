@@ -14,15 +14,16 @@ namespace Bible
         }
         public UCBibleChapters()
         {
-            Menu = new DynamicMenu(5, 5);
+            Menu = new DynamicMenu();
             InitializeComponent();
         }
 
         private void UCBibleChapters_Load(object sender, EventArgs e)
         {
-            TableLayoutPanel tablePanel = Menu.GenerateMenu();
-            tablePanel.Dock = DockStyle.Fill;
-            PanelContainer.Controls.Add(tablePanel);
+            FlowLayoutPanel flowPanel = Menu.GenerateMenu(4);
+            flowPanel.AutoScroll = true;
+            flowPanel.Dock = DockStyle.Fill;
+            PanelContainer.Controls.Add(flowPanel);
         }
     }
 }

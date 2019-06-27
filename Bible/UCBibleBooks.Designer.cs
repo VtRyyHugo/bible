@@ -172,7 +172,7 @@
             this.flowBooksPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowBooksPanel.Location = new System.Drawing.Point(0, 0);
             this.flowBooksPanel.Name = "flowBooksPanel";
-            this.flowBooksPanel.Size = new System.Drawing.Size(350, 463);
+            this.flowBooksPanel.Size = new System.Drawing.Size(350, 462);
             this.flowBooksPanel.TabIndex = 0;
             this.flowBooksPanel.Click += new System.EventHandler(this.booksButton_Click);
             // 
@@ -1234,10 +1234,12 @@
             // 
             // panelBooksContainer
             // 
+            this.panelBooksContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panelBooksContainer.Controls.Add(this.flowBooksPanel);
-            this.panelBooksContainer.Location = new System.Drawing.Point(262, 26);
+            this.panelBooksContainer.Location = new System.Drawing.Point(58, 24);
             this.panelBooksContainer.Name = "panelBooksContainer";
-            this.panelBooksContainer.Size = new System.Drawing.Size(350, 463);
+            this.panelBooksContainer.Size = new System.Drawing.Size(350, 462);
             this.panelBooksContainer.TabIndex = 1;
             // 
             // UCBibleBooks
