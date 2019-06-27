@@ -18,6 +18,7 @@ namespace Bible
             try
             {
                 int numberFiles = FileManager.FilesCounter(tag);
+                //MessageBox.Show(numberFiles.ToString());
             }
             catch (DomainException error)
             {
