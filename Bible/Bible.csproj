@@ -49,6 +49,12 @@
     <Compile Include="Entities\DynamicMenu.cs" />
     <Compile Include="Entities\Exceptions\DomainException.cs" />
     <Compile Include="Entities\FileManager.cs" />
+    <Compile Include="Entities\UserControls\BibleControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entities\UserControls\BibleControls.Designer.cs">
+      <DependentUpon>BibleControls.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

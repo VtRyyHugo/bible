@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Windows.Forms;
 using Bible.Entities.Exceptions;
+using Bible.Entities.UserControls;
 using Entities;
 
 namespace Bible
 {
-    public partial class UCBibleBooks : UserControl
+    public partial class UCBibleBooks : BibleControls
     {
+
         public UCBibleBooks()
         {
             InitializeComponent();
         }
+
 
         private void booksButton_Click(object sender, EventArgs e )
         {
@@ -18,7 +21,6 @@ namespace Bible
             try
             {
                 int numberFiles = FileManager.FilesCounter(tag);
-                //MessageBox.Show(numberFiles.ToString());
             }
             catch (DomainException error)
             {

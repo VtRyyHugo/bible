@@ -127,6 +127,7 @@
             this.Controls.Add(this.panelBibleMenu);
             this.Name = "UCBible";
             this.Size = new System.Drawing.Size(1080, 615);
+            this.Load += new System.EventHandler(this.UCBible_Load);
             this.panelBibleMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 

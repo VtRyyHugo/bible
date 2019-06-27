@@ -1,10 +1,11 @@
 ﻿using System;
 using Entities;
 using System.Windows.Forms;
+using Bible.Entities.UserControls;
 
 namespace Bible
 {
-    public partial class UCBibleChapters : UserControl
+    public partial class UCBibleChapters : BibleControls
     {
         private DynamicMenu Menu;
         public Panel PanelContainer
