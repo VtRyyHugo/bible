@@ -15,6 +15,7 @@ namespace Entities
 
         public FlowLayoutPanel GenerateMenu(int n)
         {
+            FlowPanel.Controls.Clear();
             for (int i = 0; i < n; i++)
             {
                 FlowPanel.Controls.Add(Btn(i));

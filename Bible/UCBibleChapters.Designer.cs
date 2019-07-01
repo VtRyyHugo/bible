@@ -48,7 +48,6 @@
             this.Controls.Add(this.panelChaptersContainer);
             this.Name = "UCBibleChapters";
             this.Size = new System.Drawing.Size(1080, 515);
-            this.Load += new System.EventHandler(this.UCBibleChapters_Load);
             this.ResumeLayout(false);
 
         }

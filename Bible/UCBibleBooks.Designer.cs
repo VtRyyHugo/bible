@@ -174,7 +174,6 @@
             this.flowBooksPanel.Name = "flowBooksPanel";
             this.flowBooksPanel.Size = new System.Drawing.Size(350, 462);
             this.flowBooksPanel.TabIndex = 0;
-            this.flowBooksPanel.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // btnGenesis
             // 

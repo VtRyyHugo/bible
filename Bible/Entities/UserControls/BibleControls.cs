@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Bible.Entities.UserControls
 {
@@ -22,11 +14,29 @@ namespace Bible.Entities.UserControls
             InitializeComponent();
         }
 
+        public void ChangeVisibility(bool status)
+        {
+            ButtonIcon = status;
+
+            if (ButtonIcon)
+            {
+                Button.Image = Properties.Resources.trianlgeDawn;
+                Show();
+                ButtonIcon = false;
+            }
+            else
+            {
+                Button.Image = Properties.Resources.triangleUp;
+                Hide();
+                ButtonIcon = true;
+            }
+        }
+
         public void ChangeVisibility(bool status, Panel container)
         {
             ButtonIcon = status;
 
-            if (!container.Controls.Contains(this))
+            if (!container.Controls.Contains(this) && ButtonIcon)
             {
                 Dock = DockStyle.Fill;
                 container.Controls.Add(this);

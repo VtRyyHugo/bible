@@ -8,10 +8,17 @@ namespace Bible
 {
     public partial class UCBibleBooks : BibleControls
     {
+        private int NumberFiles { get;  set; }
 
         public UCBibleBooks()
         {
             InitializeComponent();
+        }
+
+        public int GetNumberFiles
+        {
+            get { return NumberFiles; }
+            set { NumberFiles = value; }
         }
 
 
@@ -20,13 +27,15 @@ namespace Bible
             string tag = ((Button)sender).Tag.ToString();
             try
             {
-                int numberFiles = FileManager.FilesCounter(tag);
+                NumberFiles = FileManager.FilesCounter(tag);
             }
             catch (DomainException error)
             {
                 MessageBox.Show(error.Message);
             }
-            
+
+            UCBible.PassObject(this, EventArgs.Empty);
+            ChangeVisibility(false); 
         }
     }
 }

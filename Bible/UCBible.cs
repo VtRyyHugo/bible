@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Bible
@@ -14,6 +7,9 @@ namespace Bible
     {
         private UCBibleBooks UcBooks;
         private UCBibleChapters UcChapters;
+        public static EventHandler PassObject;
+        public delegate void PassContainer(Panel panel);
+        public static PassContainer PassPanelContainer;
 
         public Panel PanelContainer
         {
@@ -25,6 +21,8 @@ namespace Bible
         {
             UcBooks = new UCBibleBooks();
             UcChapters = new UCBibleChapters();
+            PassObject += UcChapters.ObjectReceiver;
+            PassPanelContainer += UcChapters.ContainerReceiver;
             InitializeComponent();
         }
 
@@ -32,6 +30,7 @@ namespace Bible
         {
             UcBooks.SetButton(btnBooks);
             UcChapters.SetButton(btnChapters);
+            PassPanelContainer(PanelContainer);
         }
 
         private void btnBooks_Click(object sender, EventArgs e)
