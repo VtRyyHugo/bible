@@ -10,22 +10,27 @@ namespace Bible
         private DynamicMenu Menu;
         private int NumberChapters {get; set;}
         private Panel BibleContainer { get; set; }
+        public  delegate void PassVersesQuantity(int quantity);
+        public static event PassVersesQuantity PassVerses;
 
         public Panel PanelContainer
         {
             get { return panelChaptersContainer; }
             set { panelChaptersContainer = value; }
         }
+
         public UCBibleChapters()
         {
             Menu = new DynamicMenu();
+            UCBible.PassUcChaptersMenu += Menu.UcChaptersReceiver;
             BibleContainer = new Panel();
+            PassVerses += UCBibleVerses.ReceiveVersesQuantity;
             InitializeComponent();
         }
 
         private void CreateMenu(int numberChapters)
         {
-            FlowLayoutPanel flowPanel = Menu.GenerateMenu(numberChapters);
+            FlowLayoutPanel flowPanel = Menu.GenerateMenu(numberChapters, "UCBibleChapters");
             flowPanel.AutoScroll = true;
             flowPanel.Dock = DockStyle.Fill;
 
@@ -52,6 +57,18 @@ namespace Bible
         {
             BibleContainer = panel;
         }
+
+        public  void btnChapterNumber_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            FileManager.BibleChapterName = FileManager.BibleBookName + btn.Name;
+            int versesQuantity = FileManager.CountVerses();
+            PassVerses(versesQuantity);
+            ChangeVisibility(false);
+            UCBible.SvMenu(this, EventArgs.Empty);
+            
+        }
+
 
         
         

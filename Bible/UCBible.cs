@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using Entities;
+using Bible.Entities.Exceptions;
 
 namespace Bible
 {
@@ -7,9 +9,13 @@ namespace Bible
     {
         private UCBibleBooks UcBooks;
         private UCBibleChapters UcChapters;
+        private UCBibleVerses UcVerses;
         public static EventHandler PassObject;
         public delegate void PassContainer(Panel panel);
+        public static EventHandler PassUcVersesMenu;
+        public static EventHandler PassUcChaptersMenu;
         public static PassContainer PassPanelContainer;
+        public static EventHandler SvMenu;
 
         public Panel PanelContainer
         {
@@ -21,8 +27,14 @@ namespace Bible
         {
             UcBooks = new UCBibleBooks();
             UcChapters = new UCBibleChapters();
+            UcVerses = new UCBibleVerses();
             PassObject += UcChapters.ObjectReceiver;
             PassPanelContainer += UcChapters.ContainerReceiver;
+            PassPanelContainer += UcVerses.ContainerReceiver;
+            PassUcVersesMenu(UcVerses, EventArgs.Empty);
+            PassUcChaptersMenu(UcChapters, EventArgs.Empty);
+            SvMenu += UcVerses.ShowMenu;
+      
             InitializeComponent();
         }
 
@@ -30,6 +42,7 @@ namespace Bible
         {
             UcBooks.SetButton(btnBooks);
             UcChapters.SetButton(btnChapters);
+            UcVerses.SetButton(btnVerses);
             PassPanelContainer(PanelContainer);
         }
 
@@ -39,6 +52,7 @@ namespace Bible
             {
                 UcBooks.ChangeVisibility(true, PanelContainer);
                 UcChapters.ChangeVisibility(false, PanelContainer);
+                UcVerses.ChangeVisibility(false, PanelContainer);
             }
             else
             {
@@ -52,6 +66,7 @@ namespace Bible
             {
                 UcChapters.ChangeVisibility(true, PanelContainer);
                 UcBooks.ChangeVisibility(false, PanelContainer);
+                UcVerses.ChangeVisibility(false, PanelContainer);
             }
             else
             {
@@ -61,7 +76,16 @@ namespace Bible
 
         private void btnVerses_Click(object sender, EventArgs e)
         {
-
+            if (UcVerses.ButtonIcon)
+            {
+                UcVerses.ChangeVisibility(true, PanelContainer);
+                UcBooks.ChangeVisibility(false, PanelContainer);
+                UcChapters.ChangeVisibility(false, PanelContainer);
+            }
+            else
+            {
+                UcVerses.ChangeVisibility(false, PanelContainer);
+            }
         }       
         
     }

@@ -25,6 +25,8 @@ namespace Bible
         private void booksButton_Click(object sender, EventArgs e )
         {
             string tag = ((Button)sender).Tag.ToString();
+            FileManager.BibleBookName = tag;
+            FileManager.BibleChapterName = tag.ToLower();
             try
             {
                 NumberFiles = FileManager.FilesCounter(tag);

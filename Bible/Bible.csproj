@@ -81,6 +81,12 @@
     <Compile Include="UCBibleChapters.Designer.cs">
       <DependentUpon>UCBibleChapters.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCBibleVerses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCBibleVerses.Designer.cs">
+      <DependentUpon>UCBibleVerses.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     <EmbeddedResource Include="UCBibleChapters.resx">
       <DependentUpon>UCBibleChapters.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCBibleVerses.resx">
+      <DependentUpon>UCBibleVerses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCHome.resx">
       <DependentUpon>UCHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,28 +141,28 @@
     <None Include="Resources\triangleUp2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Files\Exodo\exodo001.txt">
+    <Content Include="Files\Exodo\exodo1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Files\Exodo\exodo002.txt">
+    <Content Include="Files\Exodo\exodo2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Files\Exodo\exodo003.txt">
+    <Content Include="Files\Exodo\exodo3.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Files\Exodo\exodo004.txt">
+    <Content Include="Files\Exodo\exodo4.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Files\Genesis\genesis001.txt">
+    <Content Include="Files\Genesis\genesis1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Files\Genesis\genesis002.txt">
+    <Content Include="Files\Genesis\genesis2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Files\Genesis\genesis003.txt">
+    <Content Include="Files\Genesis\genesis3.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Files\Genesis\genesis004.txt">
+    <Content Include="Files\Genesis\genesis4.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
