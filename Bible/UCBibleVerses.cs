@@ -19,6 +19,7 @@ namespace Bible
         private static int VersesQuantity { get; set; }
         private FlowLayoutPanel FlowPanel;
         private Panel BibleContainer;
+        private UCBibleText UcText;
 
 
         public UCBibleVerses()
@@ -27,6 +28,7 @@ namespace Bible
             UCBible.PassUcVersesMenu += Menu.ObjectsReceiver;
             BibleContainer = new Panel();
             FlowPanel = new FlowLayoutPanel();
+            UcText = new UCBibleText();
             InitializeComponent();
         }
 
@@ -79,8 +81,9 @@ namespace Bible
         {
             Button btn = sender as Button;
             int verses = Convert.ToInt32(btn.Tag);
-            FlowPanel.Hide();
+            ChangeVisibility(false);
             CreateTextLabel(verses);
+            BibleContainer.Controls.Add(UcText);
         }
 
         public void CreateTextLabel(int verse)
@@ -93,8 +96,8 @@ namespace Bible
             label.ForeColor = Color.White;
             label.Font = new Font("Verdana", 22 , FontStyle.Bold);
             label.Text = FileManager.GetBibleVerse(verse);
-            PanelVersesContainer.Controls.Add(label);
-            label.Show();
+            UcText.PanelTextContainer.Controls.Clear();
+            UcText.PanelTextContainer.Controls.Add(label);
         }
 
     }
