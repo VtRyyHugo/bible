@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bible.Entities.UserControls;
 using Entities;
@@ -21,7 +14,6 @@ namespace Bible
         private Panel BibleContainer;
         private UCBibleText UcText;
 
-
         public UCBibleVerses()
         {
             Menu = new DynamicMenu();
@@ -36,12 +28,6 @@ namespace Bible
         {
             get { return panelVersesContainer; }
             set { panelVersesContainer = value; }
-        }
-
-        private void UCBibleVerses_Load(object sender, EventArgs e)
-        {
-            
-            
         }
 
         public static void ReceiveVersesQuantity(int quantity)
@@ -82,23 +68,8 @@ namespace Bible
             Button btn = sender as Button;
             int verses = Convert.ToInt32(btn.Tag);
             ChangeVisibility(false);
-            CreateTextLabel(verses);
+            UcText.CreateTextLabel(verses);
             BibleContainer.Controls.Add(UcText);
         }
-
-        public void CreateTextLabel(int verse)
-        {
-            Label label = new Label();
-            label.AutoSize = false;
-            label.Dock = DockStyle.Fill;
-            label.BackColor = Color.Black;
-            label.TextAlign = ContentAlignment.MiddleCenter;
-            label.ForeColor = Color.White;
-            label.Font = new Font("Verdana", 22 , FontStyle.Bold);
-            label.Text = FileManager.GetBibleVerse(verse);
-            UcText.PanelTextContainer.Controls.Clear();
-            UcText.PanelTextContainer.Controls.Add(label);
-        }
-
     }
 }

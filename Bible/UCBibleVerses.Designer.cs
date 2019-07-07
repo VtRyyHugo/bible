@@ -46,7 +46,6 @@
             this.Controls.Add(this.panelVersesContainer);
             this.Name = "UCBibleVerses";
             this.Size = new System.Drawing.Size(1080, 515);
-            this.Load += new System.EventHandler(this.UCBibleVerses_Load);
             this.ResumeLayout(false);
 
         }

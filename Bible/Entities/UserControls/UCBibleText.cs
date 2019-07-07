@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
+using Entities;
 
 namespace Bible.Entities.UserControls
 {
@@ -21,6 +15,20 @@ namespace Bible.Entities.UserControls
         {
             get { return panelTextContainer; }
             set { panelTextContainer = value; }
+        }
+
+        public void CreateTextLabel(int verse)
+        {
+            Label label = new Label();
+            label.AutoSize = false;
+            label.Dock = DockStyle.Fill;
+            label.BackColor = Color.Black;
+            label.TextAlign = ContentAlignment.MiddleCenter;
+            label.ForeColor = Color.White;
+            label.Font = new Font("Verdana", 22, FontStyle.Bold);
+            label.Text = FileManager.GetBibleVerse(verse);
+            PanelTextContainer.Controls.Clear();
+            PanelTextContainer.Controls.Add(label);
         }
     }
 }
