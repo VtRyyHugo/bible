@@ -6,8 +6,11 @@ namespace Bible.Entities.UserControls
 {
     public partial class UCBibleText : UserControl
     {
+        private Label TextLabel;
+
         public UCBibleText()
         {
+            TextLabel = new Label();
             InitializeComponent();
         }
 
@@ -19,16 +22,15 @@ namespace Bible.Entities.UserControls
 
         public void CreateTextLabel(int verse)
         {
-            Label label = new Label();
-            label.AutoSize = false;
-            label.Dock = DockStyle.Fill;
-            label.BackColor = Color.Black;
-            label.TextAlign = ContentAlignment.MiddleCenter;
-            label.ForeColor = Color.White;
-            label.Font = new Font("Verdana", 22, FontStyle.Bold);
-            label.Text = FileManager.GetBibleVerse(verse);
+            TextLabel.AutoSize = false;
+            TextLabel.Dock = DockStyle.Fill;
+            TextLabel.BackColor = Color.Black;
+            TextLabel.TextAlign = ContentAlignment.MiddleLeft;
+            TextLabel.ForeColor = Color.White;
+            TextLabel.Font = new Font("Verdana", 22, FontStyle.Bold);
+            TextLabel.Text = FileManager.GetBibleVerse(verse);
             PanelTextContainer.Controls.Clear();
-            PanelTextContainer.Controls.Add(label);
+            PanelTextContainer.Controls.Add(TextLabel);
         }
     }
 }
