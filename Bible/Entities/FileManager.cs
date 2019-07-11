@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.IO;
 using Bible.Entities.Exceptions;
+using Bible.Entities.UserControls;
 
 namespace Entities
 {
@@ -16,7 +17,7 @@ namespace Entities
 
         }
 
-        public  static int FilesCounter(string tag)
+        public static int FilesCounter(string tag)
         {
             int numberFiles = 0;
             if (Directory.Exists($@"Files\{tag}"))
@@ -27,7 +28,7 @@ namespace Entities
             {
                 throw new DomainException("Invalid folder path!");
             }
-                 
+
             return numberFiles;
         }
 
@@ -38,7 +39,7 @@ namespace Entities
             if (File.Exists(FilePath))
             {
                 TextReader tr = new StreamReader(FilePath);
-                
+
                 while (tr.ReadLine() != null)
                 {
                     count++;
@@ -58,7 +59,7 @@ namespace Entities
 
         private static void FillArrayText(string path)
         {
-            if(File.Exists(path))
+            if (File.Exists(path))
             {
                 TextReader tr = new StreamReader(path);
                 string line = "";
@@ -66,7 +67,7 @@ namespace Entities
 
                 while ((line = tr.ReadLine()) != null)
                 {
-                    ArrayText[count] = line;
+                    ArrayText[count] = line;//.Substring(2).TrimStart();
                     count++;
                 }
 
@@ -77,15 +78,32 @@ namespace Entities
             }
         }
 
-        public static string GetBibleVerse(int index)
+        public  string GetBibleVerse(int index)
         {
             FillArrayText(FilePath);
 
-            if ( ArrayText != null)
+            if (index >= ArrayText.Length -1)
             {
+                UCBibleText.NextText = false;
+                UCBibleText.PreviousText = true;
+                return ArrayText[ArrayText.Length - 1];
+            }
+            else if (index <= 0)
+            {
+                UCBibleText.PreviousText = false;
+                UCBibleText.NextText = true;
+                return ArrayText[0];
+            }
+
+            if (ArrayText != null)
+            {
+                UCBibleText.NextText = true;
+                UCBibleText.PreviousText = true;
                 return ArrayText[index];
             }
-            return "Empty text array!";  
+
+            return "";
         }
+
     }
 }

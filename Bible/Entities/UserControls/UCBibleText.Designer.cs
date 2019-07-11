@@ -33,6 +33,7 @@
             // 
             // panelTextContainer
             // 
+            this.panelTextContainer.BackColor = System.Drawing.Color.Black;
             this.panelTextContainer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelTextContainer.Location = new System.Drawing.Point(236, 35);
             this.panelTextContainer.Name = "panelTextContainer";
@@ -47,6 +48,7 @@
             this.Controls.Add(this.panelTextContainer);
             this.Name = "UCBibleText";
             this.Size = new System.Drawing.Size(1080, 515);
+            this.Load += new System.EventHandler(this.UCBibleText_Load);
             this.ResumeLayout(false);
 
         }

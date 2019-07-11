@@ -69,7 +69,16 @@ namespace Bible
             int verses = Convert.ToInt32(btn.Tag);
             ChangeVisibility(false);
             UcText.CreateTextLabel(verses);
-            BibleContainer.Controls.Add(UcText);
+            UcText.Focus();
+
+            if (!BibleContainer.Controls.Contains(UcText))
+            {
+                BibleContainer.Controls.Add(UcText);
+            }
+            else
+            {
+                UcText.Show();
+            }
         }
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
@@ -15,6 +8,7 @@ namespace Bible
     {
         static Form1 _obj;
         UCBible ub;
+        public  EventHandler PassKeyEvents;
 
         public static Form1 Instance
         {
@@ -53,21 +47,21 @@ namespace Bible
 
         private void btnMaximize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            WindowState = FormWindowState.Maximized;
             btnMaximize.Visible = false;
             btnRestaure.Visible = true;
         }
 
         private void btnRestaure_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
+            WindowState = FormWindowState.Normal;
             btnRestaure.Visible = false;
             btnMaximize.Visible = true;
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
