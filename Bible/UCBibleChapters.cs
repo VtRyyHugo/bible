@@ -62,6 +62,7 @@ namespace Bible
         {
             Button btn = sender as Button;
             FileManager.BibleChapterName = FileManager.BibleBookName + btn.Name;
+            FileManager.BibleChapterNumber = btn.Name;
             int versesQuantity = FileManager.CountVerses();
             PassVerses(versesQuantity);
             ChangeVisibility(false);

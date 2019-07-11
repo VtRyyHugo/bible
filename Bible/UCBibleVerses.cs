@@ -67,8 +67,9 @@ namespace Bible
         {
             Button btn = sender as Button;
             int verses = Convert.ToInt32(btn.Tag);
+            FileManager.BibleVerseNumber = int.Parse(btn.Name);
             ChangeVisibility(false);
-            UcText.CreateTextLabel(verses);
+            UcText.CreateVersesReader(verses);
             UcText.Focus();
 
             if (!BibleContainer.Controls.Contains(UcText))

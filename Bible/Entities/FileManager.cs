@@ -10,7 +10,11 @@ namespace Entities
         public static string[] ArrayText { get; private set; }
         private static string FilePath { get; set; }
         public static string BibleBookName { get; set; }
+        public static string BibleBookNameUTF8;
         public static string BibleChapterName { get; set; }
+        public static string BibleChapterNumber { get; set; }
+        public static int BibleVerseNumber { get; set; }
+        private static  int VersesQuantity;
 
         public FileManager()
         {
@@ -44,7 +48,7 @@ namespace Entities
                 {
                     count++;
                 }
-
+                VersesQuantity = count;
                 ArrayText = new string[count];
                 tr.Close();
 
@@ -67,8 +71,16 @@ namespace Entities
 
                 while ((line = tr.ReadLine()) != null)
                 {
-                    ArrayText[count] = line;//.Substring(2).TrimStart();
-                    count++;
+                    if (VersesQuantity < 100)
+                    {
+                        ArrayText[count] = line.Substring(2).TrimStart();
+                        count++;
+                    }
+                    else
+                    {
+                        ArrayText[count] = line.Substring(3).TrimStart();
+                        count++;
+                    } 
                 }
 
             }

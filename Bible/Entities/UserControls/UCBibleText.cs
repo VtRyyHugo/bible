@@ -11,6 +11,8 @@ namespace Bible.Entities.UserControls
         private int Verse;
         private FileManager Manager;
         public  static bool NextText, PreviousText;
+        private int VerseNumber;
+       
 
         public UCBibleText()
         {
@@ -27,9 +29,34 @@ namespace Bible.Entities.UserControls
             set { panelTextContainer = value; }
         }
 
-        public void CreateTextLabel(int verse)
+        public Panel PanelPathMapperContainer
+        {
+            get { return panelPathMapperContainer; }
+            set { panelPathMapperContainer = value; }
+        }
+
+        public Label LabelPathMapper
+        {
+            get { return labelPathMapper; }
+            set { labelPathMapper = value; }
+        }
+
+        public Panel PanelTxtVersesContainer
+        {
+            get { return panelTextVersesContainer; }
+            set { panelTextVersesContainer = value; }
+        }
+
+        public void CreateVersesReader(int verse)
         {
             Verse = verse;
+            PathMapperConfigs();
+            TextLabelConfigs(verse);
+            
+        }
+
+        private void TextLabelConfigs(int verse)
+        {
             TextLabel.AutoSize = false;
             TextLabel.Dock = DockStyle.Fill;
             TextLabel.BackColor = Color.Black;
@@ -37,8 +64,35 @@ namespace Bible.Entities.UserControls
             TextLabel.ForeColor = Color.White;
             TextLabel.Font = new Font("Verdana", 22, FontStyle.Bold);
             TextLabel.Text = Manager.GetBibleVerse(verse);
-            PanelTextContainer.Controls.Clear();
-            PanelTextContainer.Controls.Add(TextLabel);
+            PanelTxtVersesContainer.Controls.Clear();
+            PanelTxtVersesContainer.Controls.Add(TextLabel);
+        }
+
+        private void PathMapperConfigs()
+        {
+            LabelPathMapper.Controls.Clear();
+            string bibleBook = FileManager.BibleBookNameUTF8;
+            string bibleChapter = FileManager.BibleChapterNumber;
+            VerseNumber = FileManager.BibleVerseNumber;
+            LabelPathMapper.Text = $"{bibleBook} {bibleChapter} : {VerseNumber}";
+        }
+
+        private void PathMapperConfigs(string position)
+        {
+            string bibleBook = FileManager.BibleBookNameUTF8;
+            string bibleChapter = FileManager.BibleChapterNumber;
+            
+            if (position == "next")
+            {
+                VerseNumber++;
+            }
+
+            if (position == "previous")
+            {
+                VerseNumber--;
+            }
+
+            LabelPathMapper.Text = $"{bibleBook} {bibleChapter} : {VerseNumber}";
         }
 
         private void UCBibleText_Load(object sender, EventArgs e)
@@ -62,6 +116,7 @@ namespace Bible.Entities.UserControls
                     if (NextText)
                     {
                         ChangeVerse("next");
+                        PathMapperConfigs("next");
                     }
                     
                     break;
@@ -70,6 +125,7 @@ namespace Bible.Entities.UserControls
                     if (PreviousText)
                     {
                         ChangeVerse("previous");
+                        PathMapperConfigs("previous");
                     }
                     
                     break;
@@ -82,17 +138,17 @@ namespace Bible.Entities.UserControls
             if(position == "next")
             {
                 Verse++;
-                PanelTextContainer.Controls.Clear();
+                PanelTxtVersesContainer.Controls.Clear();
                 TextLabel.Text = Manager.GetBibleVerse(Verse);
-                PanelTextContainer.Controls.Add(TextLabel);
+                PanelTxtVersesContainer.Controls.Add(TextLabel);
             }
 
             if (position == "previous")
             {
                 Verse--;
-                PanelTextContainer.Controls.Clear();
+                PanelTxtVersesContainer.Controls.Clear();
                 TextLabel.Text = Manager.GetBibleVerse(Verse);
-                PanelTextContainer.Controls.Add(TextLabel);
+                PanelTxtVersesContainer.Controls.Add(TextLabel);
             }
         }
     }
