@@ -74,6 +74,7 @@ namespace Bible
 
             if (!BibleContainer.Controls.Contains(UcText))
             {
+                UcText.Dock = DockStyle.Fill;
                 BibleContainer.Controls.Add(UcText);
             }
             else
