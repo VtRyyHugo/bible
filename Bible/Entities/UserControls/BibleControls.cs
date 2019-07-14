@@ -4,61 +4,61 @@ namespace Bible.Entities.UserControls
 {
     public partial class BibleControls : UserControl
     {
-        public bool ButtonIcon { get; private set; }
+        public bool ButtonClickStatus { get; private set; }
         public Button Button { get; set; }
 
         public BibleControls()
         {
             Button = new Button();
-            ButtonIcon = true;
+            ButtonClickStatus = true;
             InitializeComponent();
         }
 
         public void ChangeVisibility(bool status)
         {
-            ButtonIcon = status;
+            ButtonClickStatus = status;
 
-            if (ButtonIcon)
+            if (ButtonClickStatus)
             {
                 Button.Image = Properties.Resources.trianlgeDawn;
                 Show();
-                ButtonIcon = false;
+                ButtonClickStatus = false;
             }
             else
             {
                 Button.Image = Properties.Resources.triangleUp;
                 Hide();
-                ButtonIcon = true;
+                ButtonClickStatus = true;
             }
         }
 
         public void ChangeVisibility(bool status, Panel container)
         {
-            ButtonIcon = status;
+            ButtonClickStatus = status;
 
-            if (!container.Controls.Contains(this) && ButtonIcon)
+            if (!container.Controls.Contains(this) && ButtonClickStatus)
             {
                 Dock = DockStyle.Fill;
                 container.Controls.Add(this);
             }
 
-            if (ButtonIcon)
+            if (ButtonClickStatus)
             {
                 Button.Image = Properties.Resources.trianlgeDawn;
                 Show();
-                ButtonIcon = false;
+                ButtonClickStatus = false;
             }
             else
             {
                 Button.Image = Properties.Resources.triangleUp;
                 Hide();
-                ButtonIcon = true;
+                ButtonClickStatus = true;
             }
         }
 
-        public void SetButtonIcon(bool status)
+        public void SetButtonClickStatus(bool status)
         {
-            ButtonIcon = status;
+            ButtonClickStatus = status;
         }
 
         public void SetButton(Button btn)

@@ -48,7 +48,7 @@ namespace Bible
 
         private void btnBooks_Click(object sender, EventArgs e)
         {
-            if (UcBooks.ButtonIcon)
+            if (UcBooks.ButtonClickStatus)
             {
                 UcBooks.ChangeVisibility(true, PanelContainer);
                 UcChapters.ChangeVisibility(false, PanelContainer);
@@ -62,7 +62,7 @@ namespace Bible
 
         private void btnChapters_Click(object sender, EventArgs e)
         {
-            if (UcChapters.ButtonIcon)
+            if (UcChapters.ButtonClickStatus)
             {
                 UcChapters.ChangeVisibility(true, PanelContainer);
                 UcBooks.ChangeVisibility(false, PanelContainer);
@@ -76,7 +76,7 @@ namespace Bible
 
         private void btnVerses_Click(object sender, EventArgs e)
         {
-            if (UcVerses.ButtonIcon)
+            if (UcVerses.ButtonClickStatus)
             {
                 UcVerses.ChangeVisibility(true, PanelContainer);
                 UcBooks.ChangeVisibility(false, PanelContainer);
