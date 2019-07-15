@@ -1,6 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using Entities;
 
 namespace Bible.Entities.UserControls
@@ -8,18 +6,12 @@ namespace Bible.Entities.UserControls
     public partial class UCBibleText : UserControl
     {
         private Label TextLabel;
-        private int Verse;
-        private FileManager Manager;
-        public  static bool NextText, PreviousText;
-        private int VerseNumber;
+        private TextManager TxtManager { get; set; }
        
 
         public UCBibleText()
         {
             TextLabel = new Label();
-            Manager = new FileManager();
-            PreviousText = true;
-            NextText = true;
             InitializeComponent();
         }
 
@@ -49,55 +41,10 @@ namespace Bible.Entities.UserControls
 
         public void CreateVersesReader(int verse)
         {
-            Verse = verse;
-            PathMapperConfigs();
-            TextLabelConfigs(verse);
+            TxtManager = new TextManager(this, PanelTxtVersesContainer, TextLabel,
+                PanelPathMapperContainer, LabelPathMapper, verse);
+            TxtManager.InitializeConfigs();
             
-        }
-
-        private void TextLabelConfigs(int verse)
-        {
-            TextLabel.AutoSize = false;
-            TextLabel.Dock = DockStyle.Fill;
-            TextLabel.BackColor = Color.Black;
-            TextLabel.TextAlign = ContentAlignment.TopLeft;
-            TextLabel.ForeColor = Color.White;
-            TextLabel.Font = new Font("Verdana", 22, FontStyle.Bold);
-            TextLabel.Text = Manager.GetBibleVerse(verse);
-            PanelTxtVersesContainer.Controls.Clear();
-            PanelTxtVersesContainer.Controls.Add(TextLabel);
-        }
-
-        private void PathMapperConfigs()
-        {
-            LabelPathMapper.Controls.Clear();
-            string bibleBook = FileManager.BibleBookNameUTF8;
-            string bibleChapter = FileManager.BibleChapterNumber;
-            VerseNumber = FileManager.BibleVerseNumber;
-            LabelPathMapper.Text = $"{bibleBook} {bibleChapter} : {VerseNumber}";
-        }
-
-        private void PathMapperConfigs(string position)
-        {
-            string bibleBook = FileManager.BibleBookNameUTF8;
-            string bibleChapter = FileManager.BibleChapterNumber;
-            
-            if (position == "next")
-            {
-                VerseNumber++;
-            }
-
-            if (position == "previous")
-            {
-                VerseNumber--;
-            }
-
-            LabelPathMapper.Text = $"{bibleBook} {bibleChapter} : {VerseNumber}";
-        }
-
-        private void UCBibleText_Load(object sender, EventArgs e)
-        {
-            Focus();
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -113,43 +60,25 @@ namespace Bible.Entities.UserControls
                     break;
 
                 case Keys.Right:
-                    if (NextText)
+                    if (TextManager.NextText)
                     {
-                        ChangeVerse("next");
-                        PathMapperConfigs("next");
+                        TxtManager.UpdateTextVerse("next");
+                        TxtManager.UpdatePathMapper("next");
                     }
                     
                     break;
 
                 case Keys.Left:
-                    if (PreviousText)
+                    if (TextManager.PreviousText)
                     {
-                        ChangeVerse("previous");
-                        PathMapperConfigs("previous");
+                        TxtManager.UpdateTextVerse("previous");
+                        TxtManager.UpdatePathMapper("previous");
                     }
                     
                     break;
             }
             Focus();
             return true;
-        }
-        private void ChangeVerse(string position)
-        {
-            if(position == "next")
-            {
-                Verse++;
-                PanelTxtVersesContainer.Controls.Clear();
-                TextLabel.Text = Manager.GetBibleVerse(Verse);
-                PanelTxtVersesContainer.Controls.Add(TextLabel);
-            }
-
-            if (position == "previous")
-            {
-                Verse--;
-                PanelTxtVersesContainer.Controls.Clear();
-                TextLabel.Text = Manager.GetBibleVerse(Verse);
-                PanelTxtVersesContainer.Controls.Add(TextLabel);
-            }
         }
     }
 }

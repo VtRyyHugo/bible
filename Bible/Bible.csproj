@@ -49,6 +49,7 @@
     <Compile Include="Entities\DynamicMenu.cs" />
     <Compile Include="Entities\Exceptions\DomainException.cs" />
     <Compile Include="Entities\FileManager.cs" />
+    <Compile Include="Entities\TextManager.cs" />
     <Compile Include="Entities\UserControls\BibleControls.cs">
       <SubType>UserControl</SubType>
     </Compile>

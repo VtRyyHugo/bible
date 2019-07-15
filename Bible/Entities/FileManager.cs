@@ -96,21 +96,21 @@ namespace Entities
 
             if (index >= ArrayText.Length -1)
             {
-                UCBibleText.NextText = false;
-                UCBibleText.PreviousText = true;
+                TextManager.NextText = false;
+                TextManager.PreviousText = true;
                 return ArrayText[ArrayText.Length - 1];
             }
             else if (index <= 0)
             {
-                UCBibleText.PreviousText = false;
-                UCBibleText.NextText = true;
+                TextManager.PreviousText = false;
+                TextManager.NextText = true;
                 return ArrayText[0];
             }
 
             if (ArrayText != null)
             {
-                UCBibleText.NextText = true;
-                UCBibleText.PreviousText = true;
+                TextManager.NextText = true;
+                TextManager.PreviousText = true;
                 return ArrayText[index];
             }
 

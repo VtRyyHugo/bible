@@ -66,11 +66,11 @@
             // labelPathMapper
             // 
             this.labelPathMapper.AutoSize = true;
-            this.labelPathMapper.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPathMapper.Font = new System.Drawing.Font("Verdana", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPathMapper.ForeColor = System.Drawing.Color.White;
             this.labelPathMapper.Location = new System.Drawing.Point(210, 21);
             this.labelPathMapper.Name = "labelPathMapper";
-            this.labelPathMapper.Size = new System.Drawing.Size(182, 25);
+            this.labelPathMapper.Size = new System.Drawing.Size(207, 29);
             this.labelPathMapper.TabIndex = 0;
             this.labelPathMapper.Text = "Bíblia Sagrada";
             // 
@@ -82,7 +82,6 @@
             this.Controls.Add(this.panelTextContainer);
             this.Name = "UCBibleText";
             this.Size = new System.Drawing.Size(1080, 515);
-            this.Load += new System.EventHandler(this.UCBibleText_Load);
             this.panelTextContainer.ResumeLayout(false);
             this.panelPathMapperContainer.ResumeLayout(false);
             this.panelPathMapperContainer.PerformLayout();
