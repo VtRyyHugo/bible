@@ -1,15 +1,23 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using Entities;
 
 namespace Bible.Entities.UserControls
 {
-    public partial class UCBibleText : UserControl
+    public partial class UCFullScreenText : UserControl
     {
-        private Label TextLabel;
+        private Label TextLabel { get; set; }
         private TextManager TxtManager { get; set; }
-       
+        private Form FormContainer { get; set; }
 
-        public UCBibleText()
+        public UCFullScreenText()
         {
             TextLabel = new Label();
             InitializeComponent();
@@ -44,7 +52,12 @@ namespace Bible.Entities.UserControls
             TxtManager = new TextManager(this, PanelTxtVersesContainer, TextLabel,
                 PanelPathMapperContainer, LabelPathMapper, verse);
             TxtManager.InitializeConfigs();
-            
+
+        }
+
+        public void SetForm(Form form)
+        {
+            FormContainer = form;
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -65,7 +78,7 @@ namespace Bible.Entities.UserControls
                         TxtManager.UpdateTextVerse("next");
                         TxtManager.UpdatePathMapper();
                     }
-                    
+
                     break;
 
                 case Keys.Left:
@@ -74,18 +87,16 @@ namespace Bible.Entities.UserControls
                         TxtManager.UpdateTextVerse("previous");
                         TxtManager.UpdatePathMapper();
                     }
-                    
+
+                    break;
+
+                case Keys.Escape:
+                    FormContainer.Close();
+
                     break;
             }
             Focus();
             return true;
-        }
-
-        private void expandScreenIcon_Click(object sender, System.EventArgs e)
-        {
-            int verseNumber = TxtManager.GetVerseNumber();
-            FormFullScreenText fullScreenTxt = new FormFullScreenText(verseNumber);
-            fullScreenTxt.Show();
         }
     }
 }

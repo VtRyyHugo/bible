@@ -63,20 +63,11 @@ namespace Entities
             LabelPathMapper.Text = $"{bibleBook} {bibleChapter} : {PathMapperVerseNumber}";
         }
 
-        public void UpdatePathMapper(string position)
+        public void UpdatePathMapper()
         {
             string bibleBook = FileManager.BibleBookNameUTF8;
             string bibleChapter = FileManager.BibleChapterNumber;
-
-            if (position == "next")
-            {
-                PathMapperVerseNumber++;
-            }
-
-            if (position == "previous")
-            {
-                PathMapperVerseNumber--;
-            }
+            PathMapperVerseNumber = FileManager.BibleVerseNumber;
 
             LabelPathMapper.Text = $"{bibleBook} {bibleChapter} : {PathMapperVerseNumber}";
         }
@@ -86,6 +77,7 @@ namespace Entities
             if (position == "next")
             {
                 VerseNumber++;
+                FileManager.BibleVerseNumber = VerseNumber + 1;
                 TextVersesContainer.Controls.Clear();
                 TextLabel.Text = Manager.GetBibleVerse(VerseNumber);
                 TextVersesContainer.Controls.Add(TextLabel);
@@ -94,10 +86,16 @@ namespace Entities
             if (position == "previous")
             {
                 VerseNumber--;
+                FileManager.BibleVerseNumber = VerseNumber + 1;
                 TextVersesContainer.Controls.Clear();
                 TextLabel.Text = Manager.GetBibleVerse(VerseNumber);
                 TextVersesContainer.Controls.Add(TextLabel);
             }
+        }
+
+        public int GetVerseNumber()
+        {
+            return VerseNumber;
         }
 
         private void control_Load(object sender, EventArgs e)
