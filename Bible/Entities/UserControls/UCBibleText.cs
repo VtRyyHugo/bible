@@ -80,5 +80,10 @@ namespace Bible.Entities.UserControls
             Focus();
             return true;
         }
+
+        private void expandScreenIcon_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
