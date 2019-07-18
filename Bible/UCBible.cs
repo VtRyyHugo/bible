@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using Entities;
-using Bible.Entities.Exceptions;
+using System.Drawing;
+using Entities.Buttons;
 
 namespace Bible
 {
@@ -10,6 +10,9 @@ namespace Bible
         private UCBibleBooks UcBooks;
         private UCBibleChapters UcChapters;
         private UCBibleVerses UcVerses;
+        private BibleButtons BooksButton;
+        private BibleButtons ChaptersButton;
+        private BibleButtons VersesButton;
         public static EventHandler PassObject;
         public delegate void PassContainer(Panel panel);
         public static EventHandler PassUcVersesMenu;
@@ -21,6 +24,11 @@ namespace Bible
         {
             get { return panelBibleContainer; }
             set { panelBibleContainer = value; }
+        }
+        public Panel PanelMenuContainer
+        {
+            get { return panelBibleMenu; }
+            set { panelBibleMenu = value; }
         }
 
         public UCBible()
@@ -34,16 +42,18 @@ namespace Bible
             PassUcVersesMenu(UcVerses, EventArgs.Empty);
             PassUcChaptersMenu(UcChapters, EventArgs.Empty);
             SvMenu += UcVerses.ShowMenu;
-      
+
             InitializeComponent();
         }
 
         private void UCBible_Load(object sender, EventArgs e)
         {
-            UcBooks.SetButton(btnBooks);
-            UcChapters.SetButton(btnChapters);
-            UcVerses.SetButton(btnVerses);
+            CreateButtons();
+            UcBooks.SetButton(BooksButton);
+            UcChapters.SetButton(ChaptersButton);
+            UcVerses.SetButton(VersesButton);
             PassPanelContainer(PanelContainer);
+            
         }
 
         private void btnBooks_Click(object sender, EventArgs e)
@@ -53,6 +63,7 @@ namespace Bible
                 UcBooks.ChangeVisibility(true, PanelContainer);
                 UcChapters.ChangeVisibility(false, PanelContainer);
                 UcVerses.ChangeVisibility(false, PanelContainer);
+                MessageBox.Show(BooksButton.Width.ToString());
             }
             else
             {
@@ -86,7 +97,35 @@ namespace Bible
             {
                 UcVerses.ChangeVisibility(false, PanelContainer);
             }
-        }       
-        
+        }
+
+        private void CreateButtons()
+        {
+            const int separator = 10;
+            int x = 138, y = 42;
+            int posX = 60, posY = PanelMenuContainer.Height - y;
+            int xPositionWidth = 0;
+
+            BooksButton = new BibleButtons(posX, posY, x, y);
+            BooksButton.Text = "Livros";
+            BooksButton.Click += btnBooks_Click;
+            xPositionWidth = BooksButton.XPositionWidth + separator;
+
+            ChaptersButton = new BibleButtons(xPositionWidth, posY, x, y);
+            ChaptersButton.Text = "Capítulos";
+            ChaptersButton.Font = new Font("Impact", 18);
+            ChaptersButton.Click += btnChapters_Click;
+            xPositionWidth = ChaptersButton.XPositionWidth + separator;
+
+            VersesButton = new BibleButtons(xPositionWidth , posY, x, y);
+            VersesButton.Text = "Versículos";
+            VersesButton.Font = new Font("Impact", 18);
+            VersesButton.Click += btnVerses_Click;
+
+            PanelMenuContainer.Controls.Add(BooksButton);
+            PanelMenuContainer.Controls.Add(ChaptersButton);
+            PanelMenuContainer.Controls.Add(VersesButton);
+        }
+
     }
 }

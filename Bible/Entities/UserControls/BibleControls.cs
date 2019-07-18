@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using Entities.Buttons;
+using System.Windows.Forms;
 
 namespace Bible.Entities.UserControls
 {
