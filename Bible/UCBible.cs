@@ -63,7 +63,6 @@ namespace Bible
                 UcBooks.ChangeVisibility(true, PanelContainer);
                 UcChapters.ChangeVisibility(false, PanelContainer);
                 UcVerses.ChangeVisibility(false, PanelContainer);
-                MessageBox.Show(BooksButton.Width.ToString());
             }
             else
             {

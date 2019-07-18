@@ -39,7 +39,6 @@
             // panelTextContainer
             // 
             this.panelTextContainer.BackColor = System.Drawing.Color.Black;
-            this.panelTextContainer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelTextContainer.Controls.Add(this.panelTextVersesContainer);
             this.panelTextContainer.Controls.Add(this.panelPathMapperContainer);
             this.panelTextContainer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -55,7 +54,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextVersesContainer.Location = new System.Drawing.Point(20, 66);
             this.panelTextVersesContainer.Name = "panelTextVersesContainer";
-            this.panelTextVersesContainer.Size = new System.Drawing.Size(583, 373);
+            this.panelTextVersesContainer.Size = new System.Drawing.Size(587, 377);
             this.panelTextVersesContainer.TabIndex = 1;
             // 
             // panelPathMapperContainer
@@ -66,7 +65,7 @@
             this.panelPathMapperContainer.Controls.Add(this.labelPathMapper);
             this.panelPathMapperContainer.Location = new System.Drawing.Point(0, 0);
             this.panelPathMapperContainer.Name = "panelPathMapperContainer";
-            this.panelPathMapperContainer.Size = new System.Drawing.Size(604, 65);
+            this.panelPathMapperContainer.Size = new System.Drawing.Size(608, 69);
             this.panelPathMapperContainer.TabIndex = 0;
             // 
             // labelPathMapper

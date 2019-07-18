@@ -41,7 +41,7 @@ namespace Entities.Buttons
             ImageAlign = ContentAlignment.MiddleRight;
             ForeColor = Color.Black;
             Cursor = Cursors.Hand;
-            Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
+            Anchor = AnchorStyles.Top | AnchorStyles.Right;
         }
 
     }
