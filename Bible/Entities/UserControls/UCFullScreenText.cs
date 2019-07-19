@@ -52,7 +52,15 @@ namespace Bible.Entities.UserControls
             TxtManager = new TextManager(this, PanelTxtVersesContainer, TextLabel,
                 PanelPathMapperContainer, LabelPathMapper, verse);
             TxtManager.InitializeConfigs();
+            EditStyles();
+        }
 
+        private void EditStyles()
+        {
+            LabelPathMapper.Font = new Font("Arial", 35, FontStyle.Bold | FontStyle.Underline);
+            LabelPathMapper.Location = new Point(PanelPathMapperContainer.Width / 2,
+                PanelPathMapperContainer.Height / 2 - LabelPathMapper.Height / 2);
+            TextLabel.Font = new Font("Arial", 46, FontStyle.Bold);
         }
 
         public void SetForm(Form form)

@@ -52,20 +52,18 @@
             this.panelTextVersesContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelTextVersesContainer.Location = new System.Drawing.Point(20, 66);
+            this.panelTextVersesContainer.Location = new System.Drawing.Point(20, 82);
             this.panelTextVersesContainer.Name = "panelTextVersesContainer";
-            this.panelTextVersesContainer.Size = new System.Drawing.Size(587, 377);
+            this.panelTextVersesContainer.Size = new System.Drawing.Size(587, 361);
             this.panelTextVersesContainer.TabIndex = 1;
             // 
             // panelPathMapperContainer
             // 
-            this.panelPathMapperContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelPathMapperContainer.Controls.Add(this.labelPathMapper);
+            this.panelPathMapperContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPathMapperContainer.Location = new System.Drawing.Point(0, 0);
             this.panelPathMapperContainer.Name = "panelPathMapperContainer";
-            this.panelPathMapperContainer.Size = new System.Drawing.Size(608, 69);
+            this.panelPathMapperContainer.Size = new System.Drawing.Size(608, 76);
             this.panelPathMapperContainer.TabIndex = 0;
             // 
             // labelPathMapper
