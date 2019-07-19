@@ -1,4 +1,5 @@
 ﻿using Bible.Entities.UserControls;
+using Entities.Display;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,6 +32,9 @@ namespace Bible
 
         private void WindowConfigs()
         {
+            DisplayController controller = new DisplayController();
+            StartPosition = FormStartPosition.Manual;
+            controller.PassToScreen(1, this);
             WindowState = FormWindowState.Maximized;
         }
 

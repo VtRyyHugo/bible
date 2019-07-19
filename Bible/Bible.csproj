@@ -49,6 +49,7 @@
     <Compile Include="Entities\Buttons\BibleButtons.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Entities\Display\DisplayController.cs" />
     <Compile Include="Entities\DynamicMenu.cs" />
     <Compile Include="Entities\Exceptions\DomainException.cs" />
     <Compile Include="Entities\FileManager.cs" />
