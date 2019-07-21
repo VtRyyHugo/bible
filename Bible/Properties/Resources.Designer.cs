@@ -63,6 +63,16 @@ namespace Bible.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap darkBlueButton {
+            get {
+                object obj = ResourceManager.GetObject("darkBlueButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap triangleUp {
             get {
                 object obj = ResourceManager.GetObject("triangleUp", resourceCulture);

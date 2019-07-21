@@ -26,6 +26,7 @@ namespace Entities.Buttons
             XPositionWidth = Location.X + Width;
             YPositionHeight = Location.Y + Height;
             StyleConfigs();
+            EventConfigs();
         }
 
         private void StyleConfigs()
@@ -42,6 +43,23 @@ namespace Entities.Buttons
             ForeColor = Color.Black;
             Cursor = Cursors.Hand;
             Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BackgroundImage = Resources.darkBlueButton;
+        }
+
+        private void EventConfigs()
+        {
+            MouseEnter += btn_MouseEnter;
+            MouseLeave += btn_MouseLeave;
+        }
+
+        public void btn_MouseEnter(object sender, EventArgs e)
+        {
+            ForeColor = Color.White;
+        }
+
+        public void btn_MouseLeave(object sender, EventArgs e)
+        {
+            ForeColor = Color.Black;
         }
 
     }
