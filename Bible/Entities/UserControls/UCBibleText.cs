@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Linq;
+using System.Windows.Forms;
 using Entities;
 
 namespace Bible.Entities.UserControls
@@ -7,6 +8,7 @@ namespace Bible.Entities.UserControls
     {
         private Label TextLabel;
         private TextManager TxtManager { get; set; }
+        private FormFullScreenText FullScreenTxt { get; set; }
        
 
         public UCBibleText()
@@ -83,9 +85,14 @@ namespace Bible.Entities.UserControls
 
         private void expandScreenIcon_Click(object sender, System.EventArgs e)
         {
+            if (Application.OpenForms.OfType<FormFullScreenText>().Count() > 0)
+            {
+                FullScreenTxt.Close();
+            }
+
             int verseNumber = TxtManager.GetVerseNumber();
-            FormFullScreenText fullScreenTxt = new FormFullScreenText(verseNumber);
-            fullScreenTxt.Show();
+            FullScreenTxt = new FormFullScreenText(verseNumber);
+            FullScreenTxt.Show();
         }
     }
 }
