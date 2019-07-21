@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 using Entities;
+using Entities.Display;
 
 namespace Bible.Entities.UserControls
 {
@@ -16,10 +10,12 @@ namespace Bible.Entities.UserControls
         private Label TextLabel { get; set; }
         private TextManager TxtManager { get; set; }
         private Form FormContainer { get; set; }
+        private DisplayController DisplayCtrl { get; set; }
 
         public UCFullScreenText()
         {
             TextLabel = new Label();
+            DisplayCtrl = new DisplayController();
             InitializeComponent();
         }
 
@@ -57,10 +53,11 @@ namespace Bible.Entities.UserControls
 
         private void EditStyles()
         {
-            LabelPathMapper.Font = new Font("Arial", 35, FontStyle.Bold | FontStyle.Underline);
-            LabelPathMapper.Location = new Point(PanelPathMapperContainer.Width / 2,
-                PanelPathMapperContainer.Height / 2 - LabelPathMapper.Height / 2);
-            TextLabel.Font = new Font("Arial", 46, FontStyle.Bold);
+            int screenWidth = DisplayCtrl.GetScreenWidth();
+            LabelPathMapper.Font = new Font("Arial", 50, FontStyle.Bold | FontStyle.Underline);
+            LabelPathMapper.Location = new Point(screenWidth / 2 - LabelPathMapper.Width / 2,
+                PanelPathMapperContainer.Height / 2 - LabelPathMapper.Height / 2 + 12);
+            TextLabel.Font = new Font("Arial", 40, FontStyle.Bold);
         }
 
         public void SetForm(Form form)

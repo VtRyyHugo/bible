@@ -21,6 +21,26 @@ namespace Entities.Display
             return Screen.AllScreens.Length;
         }
 
+        public int GetScreenWidth()
+        {
+            if (HasMoreThanOneScreen())
+            {
+                return Screen.AllScreens[1].Bounds.Width;
+            }
+
+            return Screen.PrimaryScreen.Bounds.Width;
+        }
+
+        public int GetScreenHeight()
+        {
+            if (HasMoreThanOneScreen())
+            {
+                return Screen.AllScreens[1].Bounds.Height;
+            }
+
+            return Screen.PrimaryScreen.Bounds.Height;
+        }
+
         public void PassToScreen(int index, Form form)
         {
             if (HasMoreThanOneScreen())
