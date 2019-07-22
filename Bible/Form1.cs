@@ -115,7 +115,6 @@ namespace Bible
             ub.Show();
             ub.Dock = DockStyle.Fill;
             PnlContainer.Controls.Add(ub);
-
         }
     }
 }
