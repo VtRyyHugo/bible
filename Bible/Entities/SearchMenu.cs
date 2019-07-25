@@ -1,5 +1,6 @@
 ﻿using Bible;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace Entities
@@ -12,6 +13,7 @@ namespace Entities
         private List<Button> ResultsButton { get; set; }
         private List<string> ButtonNameList { get; set; }
         private DynamicMenu Menu { get; set; }
+        private TextInfo TxtInfo { get; set; }
 
         public SearchMenu(TextBox txtBox, FlowLayoutPanel flowMenu)
         {
@@ -21,6 +23,7 @@ namespace Entities
             ResultsButton = new List<Button>();
             ButtonNameList = new List<string>();
             Menu = new DynamicMenu();
+            TxtInfo = new CultureInfo("en-US", false).TextInfo;
             SourceStringConfigs();
             TextBoxConfigs();
         }
@@ -34,12 +37,10 @@ namespace Entities
 
         private void SourceStringConfigs()
         {
-            
             foreach (Button btn in FlowMenu.Controls)
             {
                 SourceString.Add(btn.Text);
-            }
-            
+            }  
         }
 
         private void OnTextChanged(FlowLayoutPanel resultsMenu, UCBibleBooks booksControl)
@@ -51,7 +52,7 @@ namespace Entities
             {
                 foreach (string str in TxtBox.AutoCompleteCustomSource)
                 {
-                    if (str.Contains(TxtBox.Text))
+                    if (str.Contains(TxtInfo.ToTitleCase(TxtBox.Text)))
                     {
                         if (str.Contains(btn.Text))
                         {
@@ -72,10 +73,6 @@ namespace Entities
             }
             Menu.GenerateResultsMenu(ResultsButton, resultsMenu, booksControl);
         }
-
-
-        
-
 
         public void SearchButton(FlowLayoutPanel resultsMenu, UCBibleBooks booksControl)
         {
