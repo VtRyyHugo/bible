@@ -96,6 +96,7 @@
             this.btnJudas = new System.Windows.Forms.Button();
             this.btnApocalipse = new System.Windows.Forms.Button();
             this.panelBooksContainer = new System.Windows.Forms.Panel();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.flowBooksPanel.SuspendLayout();
             this.panelBooksContainer.SuspendLayout();
             this.SuspendLayout();
@@ -1236,22 +1237,32 @@
             this.panelBooksContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelBooksContainer.Controls.Add(this.flowBooksPanel);
-            this.panelBooksContainer.Location = new System.Drawing.Point(58, 24);
+            this.panelBooksContainer.Location = new System.Drawing.Point(58, 49);
             this.panelBooksContainer.Name = "panelBooksContainer";
             this.panelBooksContainer.Size = new System.Drawing.Size(350, 462);
             this.panelBooksContainer.TabIndex = 1;
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(58, 12);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(201, 20);
+            this.textBoxSearch.TabIndex = 2;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // UCBibleBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.panelBooksContainer);
             this.Name = "UCBibleBooks";
             this.Size = new System.Drawing.Size(1080, 515);
             this.flowBooksPanel.ResumeLayout(false);
             this.panelBooksContainer.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1325,5 +1336,6 @@
         private System.Windows.Forms.Button btnJoao3;
         private System.Windows.Forms.Button btnJudas;
         private System.Windows.Forms.Button btnApocalipse;
+        private System.Windows.Forms.TextBox textBoxSearch;
     }
 }

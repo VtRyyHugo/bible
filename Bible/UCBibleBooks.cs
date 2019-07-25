@@ -9,10 +9,15 @@ namespace Bible
     public partial class UCBibleBooks : BibleControls
     {
         private int NumberFiles { get;  set; }
+        private SearchMenu Search { get; set; }
+        private FlowLayoutPanel ResultsMenu { get; set; }
 
         public UCBibleBooks()
         {
             InitializeComponent();
+            Search = new SearchMenu(TextBoxSearch, FlowBooksContainer);
+            ResultsMenu = new FlowLayoutPanel();
+            ResultsMenuConfigs();
         }
 
         public int GetNumberFiles
@@ -21,8 +26,53 @@ namespace Bible
             set { NumberFiles = value; }
         }
 
+        public Panel PanelBooksContainer
+        {
+            get { return panelBooksContainer; }
+            set { panelBooksContainer = value; }
+        }
 
-        private void booksButton_Click(object sender, EventArgs e )
+        public FlowLayoutPanel FlowBooksContainer
+        {
+            get { return flowBooksPanel; }
+            set { flowBooksPanel = value; }
+        }
+
+        public TextBox TextBoxSearch
+        {
+            get { return textBoxSearch; }
+            set { textBoxSearch = value; }
+        }
+
+        public FlowLayoutPanel SearchMenuResultsContainer
+        {
+            get{ return ResultsMenu; }
+            set { ResultsMenu = value; }
+        }
+
+        private void ResultsMenuConfigs()
+        {
+            ResultsMenu.Dock = DockStyle.Fill;
+            ResultsMenu.AutoScroll = true;
+            ResultsMenu.Hide();
+            PanelBooksContainer.Controls.Add(ResultsMenu);
+        }
+
+        private void ChangeSearchMenuVisibility(bool status)
+        {
+            if (status)
+            {
+                FlowBooksContainer.Hide();
+                ResultsMenu.Show();
+            }
+            else
+            {
+                FlowBooksContainer.Show();
+                ResultsMenu.Hide();
+            }
+        }
+
+        public void booksButton_Click(object sender, EventArgs e )
         {
             Button btn = sender as Button;
             string tag = btn.Tag.ToString();
@@ -40,6 +90,18 @@ namespace Bible
 
             UCBible.PassObject(this, EventArgs.Empty);
             ChangeVisibility(false); 
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            
+            Search.SearchButton(SearchMenuResultsContainer, this);
+            ChangeSearchMenuVisibility(true);
+
+            if (string.IsNullOrWhiteSpace(TextBoxSearch.Text))
+            {
+                ChangeSearchMenuVisibility(false);
+            }
         }
     }
 }

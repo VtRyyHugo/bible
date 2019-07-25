@@ -1,9 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using Bible;
-using Bible.Entities.UserControls;
-using Entities;
 
 namespace Entities
 {
@@ -44,6 +43,35 @@ namespace Entities
             SetClickEvent(button, typeTag);
 
             return button;
+        }
+
+        public void GenerateResultsMenu(List<Button> buttonList, 
+               FlowLayoutPanel resultsMenu, UCBibleBooks booksControl)
+        {
+            Button button;
+            resultsMenu.Controls.Clear();
+            foreach (Button btn in buttonList)
+            {
+                button = new Button();
+                button.Width = btn.Width;
+                button.Height = btn.Height;
+                button.Font = new Font(btn.Font, FontStyle.Bold);
+                button.Name = btn.Name;
+                button.Text = btn.Text;
+                button.Tag = btn.Tag;
+                button.TextAlign = btn.TextAlign;
+                button.ForeColor = btn.ForeColor;
+                button.BackColor = btn.BackColor;
+                button.FlatStyle = btn.FlatStyle;
+                button.FlatAppearance.BorderColor = btn.FlatAppearance.BorderColor;
+                button.FlatAppearance.BorderSize = btn.FlatAppearance.BorderSize;
+                button.FlatAppearance.MouseDownBackColor = btn.FlatAppearance.MouseDownBackColor;
+                button.FlatAppearance.MouseOverBackColor = btn.FlatAppearance.MouseOverBackColor;
+                button.Click += booksControl.booksButton_Click;
+                resultsMenu.Controls.Add(button);
+            }
+
+            
         }
 
         private void btn_Click(object sender, EventArgs e)
