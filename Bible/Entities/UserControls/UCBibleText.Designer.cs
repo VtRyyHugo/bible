@@ -93,9 +93,9 @@
             this.expandScreenIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.expandScreenIcon.Dock = System.Windows.Forms.DockStyle.Right;
             this.expandScreenIcon.Image = ((System.Drawing.Image)(resources.GetObject("expandScreenIcon.Image")));
-            this.expandScreenIcon.Location = new System.Drawing.Point(1024, 0);
+            this.expandScreenIcon.Location = new System.Drawing.Point(1030, 0);
             this.expandScreenIcon.Name = "expandScreenIcon";
-            this.expandScreenIcon.Size = new System.Drawing.Size(56, 32);
+            this.expandScreenIcon.Size = new System.Drawing.Size(50, 32);
             this.expandScreenIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.expandScreenIcon.TabIndex = 0;
             this.expandScreenIcon.TabStop = false;
