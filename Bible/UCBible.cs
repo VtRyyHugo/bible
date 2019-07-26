@@ -104,7 +104,7 @@ namespace Bible
             int x = 138, y = 42;
             int posX = 140, posY = PanelMenuContainer.Height - (y + 10);
             int xPositionWidth = 0;
-            // 60
+
             BooksButton = new BibleButtons(posX, posY, x, y);
             BooksButton.Text = "Livros";
             BooksButton.Click += btnBooks_Click;
