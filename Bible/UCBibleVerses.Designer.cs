@@ -33,7 +33,7 @@
             // 
             // panelVersesContainer
             // 
-            this.panelVersesContainer.Location = new System.Drawing.Point(238, 35);
+            this.panelVersesContainer.Location = new System.Drawing.Point(278, 35);
             this.panelVersesContainer.Name = "panelVersesContainer";
             this.panelVersesContainer.Size = new System.Drawing.Size(608, 444);
             this.panelVersesContainer.TabIndex = 0;

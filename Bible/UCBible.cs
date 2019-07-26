@@ -100,11 +100,11 @@ namespace Bible
 
         private void CreateButtons()
         {
-            const int separator = 10;
+            const int separator = 45;
             int x = 138, y = 42;
-            int posX = 60, posY = PanelMenuContainer.Height - y;
+            int posX = 140, posY = PanelMenuContainer.Height - (y + 10);
             int xPositionWidth = 0;
-
+            // 60
             BooksButton = new BibleButtons(posX, posY, x, y);
             BooksButton.Text = "Livros";
             BooksButton.Click += btnBooks_Click;

@@ -35,7 +35,7 @@
             // 
             this.panelChaptersContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelChaptersContainer.Location = new System.Drawing.Point(245, 24);
+            this.panelChaptersContainer.Location = new System.Drawing.Point(278, 24);
             this.panelChaptersContainer.Name = "panelChaptersContainer";
             this.panelChaptersContainer.Size = new System.Drawing.Size(400, 474);
             this.panelChaptersContainer.TabIndex = 0;

@@ -1,5 +1,6 @@
 ﻿using Bible;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
 
@@ -11,7 +12,6 @@ namespace Entities
         private FlowLayoutPanel FlowMenu { get; set; }
         private AutoCompleteStringCollection SourceString { get; set; }
         private List<Button> ResultsButton { get; set; }
-        private List<string> ButtonNameList { get; set; }
         private DynamicMenu Menu { get; set; }
         private TextInfo TxtInfo { get; set; }
 
@@ -21,7 +21,6 @@ namespace Entities
             FlowMenu = flowMenu;
             SourceString = new AutoCompleteStringCollection();
             ResultsButton = new List<Button>();
-            ButtonNameList = new List<string>();
             Menu = new DynamicMenu();
             TxtInfo = new CultureInfo("en-US", false).TextInfo;
             SourceStringConfigs();
@@ -47,7 +46,6 @@ namespace Entities
         {
             int repeater = 0;
             ResultsButton.Clear();
-            ButtonNameList.Clear();
             foreach (Button btn in FlowMenu.Controls)
             {
                 foreach (string str in TxtBox.AutoCompleteCustomSource)

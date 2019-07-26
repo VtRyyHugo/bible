@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCBibleBooks));
             this.flowBooksPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnGenesis = new System.Windows.Forms.Button();
             this.btnExodo = new System.Windows.Forms.Button();
@@ -97,8 +98,10 @@
             this.btnApocalipse = new System.Windows.Forms.Button();
             this.panelBooksContainer = new System.Windows.Forms.Panel();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowBooksPanel.SuspendLayout();
             this.panelBooksContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowBooksPanel
@@ -1244,23 +1247,39 @@
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(58, 12);
+            this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxSearch.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxSearch.Location = new System.Drawing.Point(85, 19);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(201, 20);
+            this.textBoxSearch.Size = new System.Drawing.Size(273, 20);
             this.textBoxSearch.TabIndex = 2;
+            this.textBoxSearch.Text = "Pesquisar Livro\r\n";
+            this.textBoxSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
+            this.textBoxSearch.Enter += new System.EventHandler(this.textBoxSearch_Enter);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(58, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // UCBibleBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.panelBooksContainer);
             this.Name = "UCBibleBooks";
             this.Size = new System.Drawing.Size(1080, 515);
             this.flowBooksPanel.ResumeLayout(false);
             this.panelBooksContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1337,5 +1356,6 @@
         private System.Windows.Forms.Button btnJudas;
         private System.Windows.Forms.Button btnApocalipse;
         private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

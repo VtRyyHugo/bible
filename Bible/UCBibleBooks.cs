@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using Bible.Entities.Exceptions;
 using Bible.Entities.UserControls;
@@ -8,15 +9,19 @@ namespace Bible
 {
     public partial class UCBibleBooks : BibleControls
     {
-        private int NumberFiles { get;  set; }
+        private int NumberFiles { get; set; }
         private SearchMenu Search { get; set; }
         private FlowLayoutPanel ResultsMenu { get; set; }
+        private bool txtBoxTextChanged { get; set; }
+        private bool clearTextBox { get; set; }
 
         public UCBibleBooks()
         {
             InitializeComponent();
             Search = new SearchMenu(TextBoxSearch, FlowBooksContainer);
             ResultsMenu = new FlowLayoutPanel();
+            txtBoxTextChanged = false;
+            clearTextBox = true;
             ResultsMenuConfigs();
         }
 
@@ -46,7 +51,7 @@ namespace Bible
 
         public FlowLayoutPanel SearchMenuResultsContainer
         {
-            get{ return ResultsMenu; }
+            get { return ResultsMenu; }
             set { ResultsMenu = value; }
         }
 
@@ -72,7 +77,7 @@ namespace Bible
             }
         }
 
-        public void booksButton_Click(object sender, EventArgs e )
+        public void booksButton_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
             string tag = btn.Tag.ToString();
@@ -89,19 +94,34 @@ namespace Bible
             }
 
             UCBible.PassObject(this, EventArgs.Empty);
-            ChangeVisibility(false); 
+            ChangeVisibility(false);
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            
-            Search.SearchButton(SearchMenuResultsContainer, this);
-            ChangeSearchMenuVisibility(true);
+            if (txtBoxTextChanged)
+            {
+                Search.SearchButton(SearchMenuResultsContainer, this);
+                ChangeSearchMenuVisibility(true);
+                clearTextBox = false;
+            }
 
             if (string.IsNullOrWhiteSpace(TextBoxSearch.Text))
             {
                 ChangeSearchMenuVisibility(false);
             }
+        }
+
+        private void textBoxSearch_Enter(object sender, EventArgs e)
+        {
+            if (clearTextBox)
+            {
+                TextBoxSearch.Clear();
+            }
+
+            TextBoxSearch.TextAlign = HorizontalAlignment.Left;
+            TextBoxSearch.ForeColor = Color.Black;
+            txtBoxTextChanged = true;
         }
     }
 }
