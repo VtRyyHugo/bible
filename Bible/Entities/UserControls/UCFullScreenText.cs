@@ -58,6 +58,7 @@ namespace Bible.Entities.UserControls
             LabelPathMapper.Location = new Point(screenWidth / 2 - LabelPathMapper.Width / 2,
                 PanelPathMapperContainer.Height / 2 - LabelPathMapper.Height / 2 + 12);
             TextLabel.Font = new Font("Arial", 40, FontStyle.Bold);
+            TextLabel.TextAlign = ContentAlignment.TopLeft;
         }
 
         public void SetForm(Form form)
