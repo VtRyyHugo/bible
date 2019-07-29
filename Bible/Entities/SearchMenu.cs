@@ -14,6 +14,7 @@ namespace Entities
         private List<Button> ResultsButton { get; set; }
         private DynamicMenu Menu { get; set; }
         private TextInfo TxtInfo { get; set; }
+        private string InputText;
 
         public SearchMenu(TextBox txtBox, FlowLayoutPanel flowMenu)
         {
@@ -46,11 +47,13 @@ namespace Entities
         {
             int repeater = 0;
             ResultsButton.Clear();
+            InputText = TxtBox.Text;
+            InputText = InputText.ToLower();
             foreach (Button btn in FlowMenu.Controls)
             {
                 foreach (string str in TxtBox.AutoCompleteCustomSource)
                 {
-                    if (str.Contains(TxtInfo.ToTitleCase(TxtBox.Text)))
+                    if (str.Contains(TxtInfo.ToTitleCase(InputText)))
                     {
                         if (str.Contains(btn.Text))
                         {
