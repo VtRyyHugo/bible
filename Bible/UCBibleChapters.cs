@@ -8,9 +8,9 @@ namespace Bible
     public partial class UCBibleChapters : BibleControls
     {
         private DynamicMenu Menu;
-        private int NumberChapters {get; set;}
+        private int NumberChapters { get; set; }
         private Panel BibleContainer { get; set; }
-        public  delegate void PassVersesQuantity(int quantity);
+        public delegate void PassVersesQuantity(int quantity);
         public static event PassVersesQuantity PassVerses;
 
         public Panel PanelContainer
@@ -58,20 +58,21 @@ namespace Bible
             BibleContainer = panel;
         }
 
-        public  void btnChapterNumber_Click(object sender, EventArgs e)
+        public void btnChapterNumber_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            FileManager.BibleChapterName = FileManager.BibleBookName + btn.Name;
+            FileManager.BibleChapterName = FileManager.BibleBookName + FormatButtonName(btn.Name);
             FileManager.BibleChapterNumber = btn.Name;
             int versesQuantity = FileManager.CountVerses();
             PassVerses(versesQuantity);
             ChangeVisibility(false);
             UCBible.SvMenu(this, EventArgs.Empty);
-            
+
         }
 
-
-        
-        
+        private string FormatButtonName(string name)
+        {
+            return name = name.PadLeft(3, '0');
+        }
     }
 }

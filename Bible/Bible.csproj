@@ -174,28 +174,46 @@
     <None Include="Resources\triangleUp2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Files\Exodo\exodo1.txt">
+    <Content Include="Files\Exodo\exodo001.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Files\Exodo\exodo2.txt">
+    <Content Include="Files\Exodo\exodo002.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Files\Exodo\exodo3.txt">
+    <Content Include="Files\Exodo\exodo003.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Files\Exodo\exodo4.txt">
+    <Content Include="Files\Exodo\exodo004.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Files\Genesis\genesis1.txt">
+    <Content Include="Files\Genesis\genesis001.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Files\Genesis\genesis2.txt">
+    <Content Include="Files\Genesis\genesis002.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Files\Genesis\genesis3.txt">
+    <Content Include="Files\Genesis\genesis003.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Files\Genesis\genesis4.txt">
+    <Content Include="Files\Genesis\genesis004.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Genesis\genesis005.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Genesis\genesis006.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Genesis\genesis007.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Genesis\genesis008.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Genesis\genesis009.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Genesis\genesis010.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\darkBlueButton.png" />
