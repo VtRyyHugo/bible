@@ -527,7 +527,7 @@
             this.btnCanticos.Size = new System.Drawing.Size(297, 60);
             this.btnCanticos.TabIndex = 21;
             this.btnCanticos.Tag = "Canticos";
-            this.btnCanticos.Text = "Cântico dos Cânticos";
+            this.btnCanticos.Text = "Cânticos";
             this.btnCanticos.UseVisualStyleBackColor = false;
             this.btnCanticos.Click += new System.EventHandler(this.booksButton_Click);
             // 
@@ -1086,7 +1086,7 @@
             this.btnFilemom.Name = "btnFilemom";
             this.btnFilemom.Size = new System.Drawing.Size(297, 60);
             this.btnFilemom.TabIndex = 56;
-            this.btnFilemom.Tag = "Filemon";
+            this.btnFilemom.Tag = "Filemom";
             this.btnFilemom.Text = "Filemom";
             this.btnFilemom.UseVisualStyleBackColor = false;
             this.btnFilemom.Click += new System.EventHandler(this.booksButton_Click);

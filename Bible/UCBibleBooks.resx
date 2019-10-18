@@ -120,17 +120,17 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAIRSURBVEhLrZYxS1xBFIVnFcTKNFZCjPva/AMr3zYSDCHNgqK1jSBqsyraGEz+R4KJTVS0DKmt
-        BC2SclerNPkNO37nzY6Mb++TbNYLH+zO3HPO7DDvzTrnmqOu3tir1fNb8M9Ex9Xz3cK7Z67Bbm0m/67v
-        bmau9V/IK5s7KbzwLEL4oJV3+fJufuOti3jvX8M+fIGv8Alm054qCHvfC2krwGvlcRKTCTiCLlj1E16m
-        hha1rHEq7yLAZY1tDSKU+bVcqL9wCAvwBlrQBtUfyMqmKS7Ld5KAfFODiLRy1SVMlkWMjcOxGqgrGCn3
-        ROT5KIBm7bm2RSvvM48wNwbxVzatHmEF7AWNP7QEKfQshVZ/bM0LK0CnRbVgCVLoeRVa/bU1L6yAuLfz
-        liCFnqnQ6n9b88IK+Bg0vmUJUujRyVKdW/PCCpgNmuIojlsiwVwNfqiRWrV6RF+ABhHoIVJpu8bKol7P
-        QdHh/R1ULqQqYBr0EKl0FHVaNKY917bElau24EXZOGIGCEQZ6CGqKq1cWxprIzWOVAYIRCPQhG9wA7/g
-        AlZBT7NeKWn1hTwZ8C/IFNIXYvE+iwwdIDCtDHmWAIGpGVIO2CkLBwFThaS1Is+HAF1zlnAQME1DPuN7
-        FgM60NU1ZwkHAeNlmS+uf1iTJ7S59PNdJRUDXHNDX/ph5eHS56YMf1vCfumXpH89hqETzJuj932a4ZYR
-        8BBqAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAhFJREFUSEut
+        ljFLXEEUhWcVxMo0VkKM+9r8AyvfNhIMIc2CorWNIGqzKtoYTP5HgolNVLQMqa0ELZJyV6s0+Q07fufN
+        joxv75Ns1gsf7M7cc87sMO/NOueao67e2KvV81vwz0TH1fPdwrtnrsFubSb/ru9uZq71X8grmzspvPAs
+        QviglXf58m5+462LeO9fwz58ga/wCWbTnioIe98LaSvAa+VxEpMJOIIuWPUTXqaGFrWscSrvIsBljW0N
+        IpT5tVyov3AIC/AGWtAG1R/IyqYpLst3koB8U4OItHLVJUyWRYyNw7EaqCsYKfdE5PkogGbtubZFK+8z
+        jzA3BvFXNq0eYQXsBY0/tAQp9CyFVn9szQsrQKdFtWAJUuh5FVr9tTUvrIC4t/OWIIWeqdDqf1vzwgr4
+        GDS+ZQlS6NHJUp1b88IKmA2a4iiOWyLBXA1+qJFatXpEX4AGEeghUmm7xsqiXs9B0eH9HVQupCpgGvQQ
+        qXQUdVo0pj3XtsSVq7bgRdk4YgYIRBnoIaoqrVxbGmsjNY5UBghEI9CEb3ADv+ACVkFPs14pafWFPBnw
+        L8gU0hdi8T6LDB0gMK0MeZYAgakZUg7YKQsHAVOFpLUiz4cAXXOWcBAwTUM+43sWAzrQ1TVnCQcB42WZ
+        L65/WJMntLn0810lFQNcc0Nf+mHl4dLnpgx/W8J+6Zekfz2GoRPMm6P3fZrhlhHwEGoAAAAASUVORK5C
+        YII=
 </value>
   </data>
 </root>
